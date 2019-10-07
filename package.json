@@ -1,0 +1,10 @@
+{
+    "date": "Mon Oct 07 13:24:02 CEST 2019",
+    "name": "Burgers",
+    "format": "xml",
+    "description": "",
+    "files": ["Burgers.xml"],
+    "repository": {},
+    "version": "1.0",
+    "dependencies": [{"Simplicite": "4.0"}]
+}

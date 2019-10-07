@@ -1,0 +1,69 @@
+<template id="burgers-template">
+<div class="cover">
+	<div class="cover-image" style="background-image : url({{bannerURL}})"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center head-title">
+				<h1><span style="font-size: 1.5em">Business Burgers</span></h1>
+				<div class="baseline"><h2>Les burgers adaptés à votre métier!</h2></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="burgers-list" class="section-s">
+	<div class="container">
+		<div class="row">
+			{{#list}}
+			<div class="col-md-4">
+				<h1 class="text-primary text-center title">{{brgBurgerName}}</h1>
+				<h3 class="text-muted text-center">{{#brgBurgerPicture}}<img data-id="{{row_id}}" src="data:{{mime}};base64,{{content}}"/>{{/brgBurgerPicture}}</h3>
+				<p class="text-center"><button type="button" data-id="{{row_id}}" class="btn btn-primary btn-md">{{#toFixed}}{{brgBugerPrice}}{{/toFixed}} €</button></p>
+				<p class="text-left text-muted">{{{brgBurgerDescription}}}</p>
+			</div>
+			{{/list}}
+		</div>
+	</div>
+</div>
+<div class="section-s">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<hr/><div style="text-align: center;"><button type="button" class="btn btn-warning btn-sm" id="customer">Mes coordonnées et mes préférences</button></div>
+			</div>
+		</div>
+	</div>
+</div>
+</template>
+
+<template id="customer-template">
+	<div class="form-group">
+		<label for="email">Email</label>
+		<input type="text" class="form-control" id="customer-email" value="{{item.brgCustomerEmail}}" disabled readonly>
+	</div>
+	<div class="form-group">
+		<label for="email">Téléphone</label>
+		<input type="text" class="form-control" id="customer-phone" value="{{item.brgCustomerPhone}}" placeholder="Votre téléphone">
+	</div>
+	<div class="form-group">
+		<label for="firstname">Prénom</label>
+		<input type="text" class="form-control" id="customer-firstname" value="{{item.brgCustomerFirstname}}" placeholder="Votre prénom">
+	</div>
+	<div class="form-group">
+		<label for="-lastname">Nom</label>
+		<input type="text" class="form-control" id="customer-lastname" value="{{item.brgCustomerLastname}}" placeholder="Votre nom">
+	</div>
+	<div id="customer-exclusions">
+		Vos exclusions:
+		{{#_ingredients}}
+		<div class="checkbox">
+			<label><input type="checkbox" data-id="{{row_id}}" {{_checked}}> {{brgIngredientName}}</label>
+		</div>
+	</div>
+	{{/_ingredients}}
+</template>
+
+<template id="order-template">
+	<div class="text-center">{{#brgBurgerPicture}}<img data-id="{{row_id}}" src="data:{{mime}};base64,{{content}}"/>{{/brgBurgerPicture}}</div>
+</template>
+
+<div id="burgers"></div>
