@@ -88,6 +88,11 @@ paths:
         type: boolean
         required: false
       - in: query
+        name: _indexsearch
+        description: Index search query
+        type: string
+        required: false
+      - in: query
         name: brgBurgerName
         description: Search filter for Burger name
         type: string
@@ -169,6 +174,11 @@ paths:
         name: _doc
         description: Documentation?
         type: boolean
+        required: false
+      - in: query
+        name: _indexsearch
+        description: Index search query
+        type: string
         required: false
       - in: query
         name: brgCustomerEmail
@@ -392,6 +402,11 @@ paths:
         name: _doc
         description: Documentation?
         type: boolean
+        required: false
+      - in: query
+        name: _indexsearch
+        description: Index search query
+        type: string
         required: false
       - in: query
         name: brgIngredientName
@@ -1380,6 +1395,11 @@ paths:
         type: boolean
         required: false
       - in: query
+        name: _indexsearch
+        description: Index search query
+        type: string
+        required: false
+      - in: query
         name: _crosstab
         description: Apply pivot table
         type: string
@@ -1481,7 +1501,7 @@ definitions:
         description: Ingredient
         type: string
       row_id:
-        description: ID
+        description: Unique technical row ID
         type: string
   ArrayOfBRGCustomer:
     type: array
@@ -1511,7 +1531,7 @@ definitions:
         description: Email of the customer
         type: string
       row_id:
-        description: ID
+        description: Unique technical row ID
         type: string
   BRGIngredient:
     type: object
@@ -1520,7 +1540,7 @@ definitions:
         description: Ingredient name
         type: string
       row_id:
-        description: ID
+        description: Unique technical row ID
         type: string
       brgIngredientPrice:
         description: Ingredient price
@@ -1535,7 +1555,7 @@ definitions:
         description: Description of the burger
         type: string
       row_id:
-        description: ID
+        description: Unique technical row ID
         type: string
       brgBurgerName:
         description: Burger name
@@ -1573,7 +1593,7 @@ definitions:
         description: Customer name
         type: string
       row_id:
-        description: ID
+        description: Unique technical row ID
         type: string
       brgExclusionIngredientId__brgIngredientName:
         description: Ingredient name
@@ -1615,7 +1635,7 @@ definitions:
         description: Composition of the burger
         type: string
       row_id:
-        description: ID
+        description: Unique technical row ID
         type: string
       brgOrderDate:
         description: Order date

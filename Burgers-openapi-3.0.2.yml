@@ -35,7 +35,7 @@ components:
           description: Ingredient
           type: string
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
     ArrayOfBRGCustomer:
       type: array
@@ -65,7 +65,7 @@ components:
           description: Email of the customer
           type: string
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
     BRGIngredient:
       type: object
@@ -74,7 +74,7 @@ components:
           description: Ingredient name
           type: string
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
         brgIngredientPrice:
           description: Ingredient price
@@ -89,7 +89,7 @@ components:
           description: Description of the burger
           type: string
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
         brgBurgerName:
           description: Burger name
@@ -127,7 +127,7 @@ components:
           description: Customer name
           type: string
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
         brgExclusionIngredientId__brgIngredientName:
           description: Ingredient name
@@ -169,7 +169,7 @@ components:
           description: Composition of the burger
           type: string
         row_id:
-          description: ID
+          description: Unique technical row ID
           type: string
         brgOrderDate:
           description: Order date
@@ -336,6 +336,12 @@ paths:
       - schema:
           type: string
         in: query
+        name: _indexsearch
+        description: Index search query
+        required: false
+      - schema:
+          type: string
+        in: query
         name: brgBurgerName
         description: Search filter for Burger name
         required: false
@@ -429,6 +435,12 @@ paths:
         in: query
         name: _doc
         description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _indexsearch
+        description: Index search query
         required: false
       - schema:
           type: string
@@ -696,6 +708,12 @@ paths:
         in: query
         name: _doc
         description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _indexsearch
+        description: Index search query
         required: false
       - schema:
           type: string
@@ -1879,6 +1897,12 @@ paths:
         in: query
         name: _doc
         description: Documentation?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _indexsearch
+        description: Index search query
         required: false
       - schema:
           type: string
