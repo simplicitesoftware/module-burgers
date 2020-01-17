@@ -23,13 +23,13 @@ components:
           description: Burger
           type: string
         brgCompositionIngredientId__brgIngredientName:
-          description: Ingredient name
+          description: Name
           type: string
         brgCompositionQuantity:
           description: Quantity
           type: integer
         brgCompositionBurgerId__brgBurgerName:
-          description: Burger name
+          description: Name
           type: string
         brgCompositionIngredientId:
           description: Ingredient
@@ -53,16 +53,16 @@ components:
       type: object
       properties:
         brgCustomerPhone:
-          description: Phone number of the customer
+          description: Phone number
           type: string
         brgCustomerFirstname:
-          description: First name of the client
+          description: First name
           type: string
         brgCustomerLastname:
-          description: Last name of the client
+          description: Last name
           type: string
         brgCustomerEmail:
-          description: Email of the customer
+          description: Email
           type: string
         row_id:
           description: Unique technical row ID
@@ -71,31 +71,31 @@ components:
       type: object
       properties:
         brgIngredientName:
-          description: Ingredient name
+          description: Name
           type: string
         row_id:
           description: Unique technical row ID
           type: string
         brgIngredientPrice:
-          description: Ingredient price
+          description: Price
           type: number
     BRGBurger:
       type: object
       properties:
         brgBurgerPicture:
-          description: Picture of the burger
+          description: Picture
           type: object
         brgBurgerDescription:
-          description: Description of the burger
+          description: Description
           type: string
         row_id:
           description: Unique technical row ID
           type: string
         brgBurgerName:
-          description: Burger name
+          description: Name
           type: string
         brgBugerPrice:
-          description: Burger price
+          description: Price
           type: number
     ArrayOfBRGIngredient:
       type: array
@@ -124,13 +124,13 @@ components:
           description: Customer
           type: string
         brgExclusionCustomerId__brgCustomerEmail:
-          description: Customer name
+          description: Email
           type: string
         row_id:
           description: Unique technical row ID
           type: string
         brgExclusionIngredientId__brgIngredientName:
-          description: Ingredient name
+          description: Name
           type: string
     ActionResult:
       type: object
@@ -145,34 +145,34 @@ components:
           description: Burger
           type: string
         brgOrderDatetime:
-          description: Order date and time
+          description: Date and time
           type: string
         brgOrderCustomerId__brgCustomerEmail:
-          description: Customer email
+          description: Email
           type: string
         brgOrderBurgerId__brgBugerPrice:
-          description: Burger price
+          description: Price
           type: number
         brgOrderCustomerId:
           description: Customer
           type: string
         brgOrderBurgerId__brgBurgerName:
-          description: Burger name
+          description: Name
           type: string
         brgOrderCustomerId__brgCustomerFirstname:
-          description: Customer first name
+          description: First name
           type: string
         brgOrderCustomerId__brgCustomerLastname:
-          description: Customer name
+          description: Last name
           type: string
         brgOrderComposition:
-          description: Composition of the burger
+          description: Composition
           type: string
         row_id:
           description: Unique technical row ID
           type: string
         brgOrderDate:
-          description: Order date
+          description: Date
           type: string
     TreeviewData:
       type: object
@@ -343,25 +343,25 @@ paths:
           type: string
         in: query
         name: brgBurgerName
-        description: Search filter for Burger name
+        description: Search filter for Name
         required: false
       - schema:
           type: number
         in: query
         name: brgBugerPrice
-        description: Search filter for Burger price
+        description: Search filter for Price
         required: false
       - schema:
           type: string
         in: query
         name: brgBurgerPicture
-        description: Search filter for Picture of the burger
+        description: Search filter for Picture
         required: false
       - schema:
           type: string
         in: query
         name: brgBurgerDescription
-        description: Search filter for Description of the burger
+        description: Search filter for Description
         required: false
       tags:
       - BRGBurger
@@ -446,25 +446,25 @@ paths:
           type: string
         in: query
         name: brgCustomerEmail
-        description: Search filter for Email of the customer
+        description: Search filter for Email
         required: false
       - schema:
           type: string
         in: query
         name: brgCustomerPhone
-        description: Search filter for Phone number of the customer
+        description: Search filter for Phone number
         required: false
       - schema:
           type: string
         in: query
         name: brgCustomerLastname
-        description: Search filter for Last name of the client
+        description: Search filter for Last name
         required: false
       - schema:
           type: string
         in: query
         name: brgCustomerFirstname
-        description: Search filter for First name of the client
+        description: Search filter for First name
         required: false
       tags:
       - BRGCustomer
@@ -509,7 +509,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGCustomer
@@ -548,7 +548,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -609,7 +609,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGCustomer
@@ -659,7 +659,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGCustomer
@@ -719,13 +719,13 @@ paths:
           type: string
         in: query
         name: brgIngredientName
-        description: Search filter for Ingredient name
+        description: Search filter for Name
         required: false
       - schema:
           type: number
         in: query
         name: brgIngredientPrice
-        description: Search filter for Ingredient price
+        description: Search filter for Price
         required: false
       tags:
       - BRGIngredient
@@ -770,7 +770,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGExclusion
@@ -809,7 +809,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -870,7 +870,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGExclusion
@@ -920,7 +920,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGExclusion
@@ -965,7 +965,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGIngredient
@@ -1004,7 +1004,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1065,7 +1065,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGIngredient
@@ -1115,7 +1115,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGIngredient
@@ -1160,7 +1160,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGComposition
@@ -1199,7 +1199,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1260,7 +1260,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGComposition
@@ -1310,7 +1310,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGComposition
@@ -1355,7 +1355,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGOrder
@@ -1394,7 +1394,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1455,7 +1455,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGOrder
@@ -1505,7 +1505,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGOrder
@@ -1565,7 +1565,7 @@ paths:
           type: string
         in: query
         name: brgCompositionBurgerId__brgBurgerName
-        description: Search filter for Burger name
+        description: Search filter for Name
         required: false
       - schema:
           type: string
@@ -1577,7 +1577,7 @@ paths:
           type: string
         in: query
         name: brgCompositionIngredientId__brgIngredientName
-        description: Search filter for Ingredient name
+        description: Search filter for Name
         required: false
       - schema:
           type: integer
@@ -1628,7 +1628,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGBurger
@@ -1667,7 +1667,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1728,7 +1728,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGBurger
@@ -1778,7 +1778,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - BRGBurger
@@ -1837,7 +1837,7 @@ paths:
           type: string
         in: query
         name: brgExclusionCustomerId__brgCustomerEmail
-        description: Search filter for Customer name
+        description: Search filter for Email
         required: false
       - schema:
           type: string
@@ -1849,7 +1849,7 @@ paths:
           type: string
         in: query
         name: brgExclusionIngredientId__brgIngredientName
-        description: Search filter for Ingredient name
+        description: Search filter for Name
         required: false
       tags:
       - BRGExclusion
@@ -1922,7 +1922,7 @@ paths:
           type: string
         in: query
         name: brgOrderDatetime
-        description: Search filter for Order date and time
+        description: Search filter for Date and time
         required: false
       - schema:
           type: string
@@ -1934,19 +1934,19 @@ paths:
           type: string
         in: query
         name: brgOrderCustomerId__brgCustomerEmail
-        description: Search filter for Customer email
+        description: Search filter for Email
         required: false
       - schema:
           type: string
         in: query
         name: brgOrderCustomerId__brgCustomerFirstname
-        description: Search filter for Customer first name
+        description: Search filter for First name
         required: false
       - schema:
           type: string
         in: query
         name: brgOrderCustomerId__brgCustomerLastname
-        description: Search filter for Customer name
+        description: Search filter for Last name
         required: false
       - schema:
           type: string
@@ -1958,25 +1958,25 @@ paths:
           type: string
         in: query
         name: brgOrderBurgerId__brgBurgerName
-        description: Search filter for Burger name
+        description: Search filter for Name
         required: false
       - schema:
           type: number
         in: query
         name: brgOrderBurgerId__brgBugerPrice
-        description: Search filter for Burger price
+        description: Search filter for Price
         required: false
       - schema:
           type: string
         in: query
         name: brgOrderComposition
-        description: Search filter for Composition of the burger
+        description: Search filter for Composition
         required: false
       - schema:
           type: string
         in: query
         name: brgOrderDate
-        description: Search filter for Order date
+        description: Search filter for Date
         required: false
       tags:
       - BRGOrder

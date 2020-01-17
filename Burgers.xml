@@ -7,9 +7,55 @@
 		<mdl_name>Burgers</mdl_name>
 		<mdl_version>1.0</mdl_version>
 		<mdl_prefix/>
-		<mdl_url><![CDATA[https://www.simplicite.io/resources/modules/burgers-app-4.0.xml]]></mdl_url>
-		<mdl_lastupd>2019-10-07 13:24:02</mdl_lastupd>
-		<mdl_comment/>
+		<mdl_url><![CDATA[{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-burgers.git"
+	}
+}]]></mdl_url>
+		<mdl_lastupd>2020-01-17 23:31:40</mdl_lastupd>
+		<mdl_comment><![CDATA[### Introduction
+
+This is a sample **Burger shop** application (backend and frontend).
+
+### Import
+
+To import this module:
+
+- Create a module named `Burgers`
+- Set the settings as:
+
+```json
+{
+	"type": "git",
+	"origin": {
+		"uri": "https://github.com/simplicitesoftware/module-burgers.git"
+	}
+}
+```
+
+- Click on the _Import module_ button
+
+### Configure
+
+In order to have the frontend working the password for the
+webservices-only user `burgers` must be `simplicite`.
+
+This ca ben acheived by importing the follwing XML:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<simplicite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.simplicite.fr/base" xsi:schemaLocation="http://www.simplicite.fr/base https://www.simplicite.io/resources/schemas/base.xsd">
+<object>
+	<name>UserPwd</name>
+	<action>update</action>
+	<data>
+		<usr_login_read>burgers</usr_login_read>
+		<usr_password>simplicite</usr_password>
+	</data>
+</object>
+</simplicite>
+```]]></mdl_comment>
 	</data>
 </object>
 <object>
@@ -93,7 +139,7 @@
 		<usr_extra>1</usr_extra>
 		<usr_subhead>1</usr_subhead>
 		<usr_logout>2018-08-30 00:11:12</usr_logout>
-		<usr_last_logon>2019-10-07 10:45:37</usr_last_logon>
+		<usr_last_logon>2020-01-13 13:07:27</usr_last_logon>
 		<usr_dateformat/>
 		<usr_uuid>de1049ce-bd3c-442d-bcad-04640dec3bf4</usr_uuid>
 	</data>
@@ -240,6 +286,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>2</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -259,7 +306,7 @@
 		<fld_rendering>EURO</fld_rendering>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Price]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -276,6 +323,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -283,7 +331,7 @@
 		<fld_copy>1</fld_copy>
 		<fld_size>100</fld_size>
 		<fld_minsize/>
-		<fld_precision>hf=5</fld_precision>
+		<fld_precision>hf=10</fld_precision>
 		<fld_fromdate_id.fld_name/>
 		<fld_dfault/>
 		<fld_indexable>0</fld_indexable>
@@ -295,7 +343,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Description]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -312,6 +360,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -331,7 +380,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Name]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -348,6 +397,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>20</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -367,7 +417,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Picture]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -384,6 +434,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -403,7 +454,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Burger]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -420,6 +471,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -439,7 +491,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Ingredient]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -456,6 +508,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -475,7 +528,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Quantity]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -492,6 +545,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>12</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -511,7 +565,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Email]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -528,6 +582,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -547,7 +602,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[First name]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -564,6 +619,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -583,7 +639,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Last name]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -600,6 +656,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>22</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -619,7 +676,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Phone number]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -636,6 +693,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -655,7 +713,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Customer]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -672,6 +730,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -691,7 +750,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Ingredient]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -708,6 +767,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -727,7 +787,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Name]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -744,6 +804,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>2</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -763,7 +824,7 @@
 		<fld_rendering>EURO</fld_rendering>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Price]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -780,6 +841,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -799,7 +861,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Burger]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -816,6 +878,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>13</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -835,7 +898,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Composition]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -852,6 +915,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -871,7 +935,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Customer]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -888,6 +952,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>4</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -907,7 +972,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Date]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -924,6 +989,7 @@
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray>0</fld_tray>
 		<fld_type>5</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -943,7 +1009,7 @@
 		<fld_rendering/>
 		<fld_calc/>
 		<fld_objlist/>
-		<fld_comment/>
+		<fld_comment><![CDATA[Date and time]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -954,34 +1020,42 @@
 	<data>
 		<tpl_name>BRGBurger</tpl_name>
 		<tpl_ui><![CDATA[<div class="row">
-  <div class="col-sm-6">
-    <div class="field" data-field="brgBurgerName"></div>
-    <div class="field" data-field="brgBugerPrice"></div>
+  <div class="col-sm-8">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="field" data-field="brgBurgerName"></div>
+      </div>
+      <div class="col-sm-4">
+        <div class="field" data-field="brgBugerPrice"></div>
+      </div>
+    </div>
     <div class="field" data-field="brgBurgerDescription"></div>
   </div>
-  <div class="col-sm-6">
+  <div class="col-sm-4">
     <div class="field" data-field="brgBurgerPicture"></div>
   </div>
-</div>]]></tpl_ui>
+</div>
+]]></tpl_ui>
 		<tpl_min/>
 		<tpl_image/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
 		<tpl_name>BRGBurgerIngredient</tpl_name>
-		<tpl_ui><![CDATA[<div>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="field" data-field="brgCompositionBurgerId"></div>
-      <div class="field" data-field="brgCompositionBurgerId__brgBurgerName"></div>
-    </div>
-    <div class="col-sm-6">
-      <div class="field" data-field="brgCompositionIngredientId"></div>
-      <div class="field" data-field="brgCompositionIngredientId__brgIngredientName"></div>
-    </div>
+		<tpl_ui><![CDATA[<div class="row">
+  <div class="col-sm-5">
+    <div class="field" data-field="brgCompositionBurgerId"></div>
+    <div class="field" data-field="brgCompositionBurgerId__brgBurgerName"></div>
   </div>
-  <div class="field" data-field="brgCompositionQuantity"></div>
-</div>]]></tpl_ui>
+  <div class="col-sm-5">
+    <div class="field" data-field="brgCompositionIngredientId"></div>
+    <div class="field" data-field="brgCompositionIngredientId__brgIngredientName"></div>
+  </div>
+  <div class="col-sm-2">
+    <div class="field" data-field="brgCompositionQuantity"></div>
+  </div>
+</div>
+]]></tpl_ui>
 		<tpl_min/>
 		<tpl_image/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
@@ -1058,6 +1132,39 @@
 	</data>
 </object>
 <object>
+	<name>ObjectFieldArea</name>
+	<action>upsert</action>
+	<data>
+		<ofa_name>BRGBurger-1</ofa_name>
+		<ofa_position>1</ofa_position>
+		<ofa_title>1</ofa_title>
+		<ofa_ui><![CDATA[<div>
+  <div class="field" data-field="brgBurgerName"></div>
+  <div class="field" data-field="brgBugerPrice"></div>
+  <div class="field" data-field="brgBurgerPicture"></div>
+  <div class="field" data-field="brgBurgerDescription"></div>
+</div>
+]]></ofa_ui>
+		<ofa_icon>star</ofa_icon>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+	</data>
+	<data>
+		<ofa_name>BRGComposition-1</ofa_name>
+		<ofa_position>1</ofa_position>
+		<ofa_title>1</ofa_title>
+		<ofa_ui><![CDATA[<div>
+  <div class="field" data-field="brgCompositionBurgerId"></div>
+  <div class="field" data-field="brgCompositionBurgerId__brgBurgerName"></div>
+  <div class="field" data-field="brgCompositionIngredientId"></div>
+  <div class="field" data-field="brgCompositionIngredientId__brgIngredientName"></div>
+  <div class="field" data-field="brgCompositionQuantity"></div>
+</div>
+]]></ofa_ui>
+		<ofa_icon>star</ofa_icon>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
 	<name>Domain</name>
 	<action>upsert</action>
 	<data>
@@ -1097,7 +1204,7 @@
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>1</obo_nosearch>
-		<obo_comment/>
+		<obo_comment><![CDATA[**Burger** business object]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec/>
 		<obo_delspec/>
@@ -1157,7 +1264,7 @@
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>1</obo_nosearch>
-		<obo_comment/>
+		<obo_comment><![CDATA[Burger **composition** business object]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec/>
 		<obo_delspec/>
@@ -1217,7 +1324,7 @@
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>1</obo_nosearch>
-		<obo_comment/>
+		<obo_comment><![CDATA[Burger **customer** business object]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec/>
 		<obo_delspec/>
@@ -1277,7 +1384,7 @@
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>1</obo_nosearch>
-		<obo_comment/>
+		<obo_comment><![CDATA[Burger **user's ingredient exclusion** business object]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec/>
 		<obo_delspec/>
@@ -1337,7 +1444,7 @@
 		<obo_script_id/>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>1</obo_nosearch>
-		<obo_comment/>
+		<obo_comment><![CDATA[Burger **ingredient**]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec/>
 		<obo_delspec/>
@@ -1397,7 +1504,7 @@
 		<obo_script_id>scripts/ObjectInternal/BRGOrder.js</obo_script_id>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>1</obo_nosearch>
-		<obo_comment/>
+		<obo_comment><![CDATA[Burger **order**]]></obo_comment>
 		<obo_type>O</obo_type>
 		<obo_searchspec/>
 		<obo_delspec/>
@@ -1479,8 +1586,8 @@
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>BRGBurger-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1508,8 +1615,8 @@
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[0]]></obf_field_id.fld_dfault>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>BRGBurger-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1537,8 +1644,8 @@
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>BRGBurger-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1566,8 +1673,8 @@
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>BRGBurger-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1595,8 +1702,8 @@
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>BRGComposition-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1624,8 +1731,8 @@
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>BRGComposition-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1653,8 +1760,8 @@
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>BRGComposition-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1682,8 +1789,8 @@
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>BRGComposition-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -1711,8 +1818,8 @@
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[1]]></obf_field_id.fld_dfault>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>BRGComposition-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2319,8 +2426,8 @@
 		<obf_inline>0</obf_inline>
 		<obf_rendering/>
 		<obf_treedepth/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>BRGComposition-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2415,8 +2522,8 @@
 		<obf_inline>0</obf_inline>
 		<obf_rendering/>
 		<obf_treedepth/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>BRGComposition-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2819,6 +2926,42 @@
 		<res_file/>
 		<res_file_compiled/>
 		<res_image>resources/Disposition/default/burgers.png</res_image>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>Disposition</name>
+				<data>
+					<dis_code>default</dis_code>
+				</data>
+			</object>
+		</res_object>
+		<res_type>IMG</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>burgers-module</res_code>
+		<res_cached>0</res_cached>
+		<res_file/>
+		<res_file_compiled/>
+		<res_image>resources/Disposition/default/burgers-module.png</res_image>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+	</data>
+	<data>
+		<res_object>
+			<object>
+				<name>Disposition</name>
+				<data>
+					<dis_code>default</dis_code>
+				</data>
+			</object>
+		</res_object>
+		<res_type>IMG</res_type>
+		<res_lang>ANY</res_lang>
+		<res_code>burgers-module-full</res_code>
+		<res_cached>0</res_cached>
+		<res_file/>
+		<res_file_compiled/>
+		<res_image>resources/Disposition/default/burgers-module-full.png</res_image>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -3394,6 +3537,38 @@
 		<tsl_listhelp/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 		<tsl_tooltip/>
+	</data>
+</object>
+<object>
+	<name>TranslateFieldArea</name>
+	<action>upsert</action>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>BRGBurger-1</tsl_id.ofa_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>BRGBurger-1</tsl_value>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>BRGComposition-1</tsl_id.ofa_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>BRGComposition-1</tsl_value>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>BRGBurger-1</tsl_id.ofa_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>BRGBurger-1</tsl_value>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>BRGComposition-1</tsl_id.ofa_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>BRGComposition-1</tsl_value>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 </object>
 <object>
