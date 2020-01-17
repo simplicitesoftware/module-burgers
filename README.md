@@ -170,6 +170,6 @@ No custom action
 `burgers` external object definition
 ------------------------------------
 
-
+Burger shop responsive web **frontend**
 
 
