@@ -13,7 +13,7 @@
 		"uri": "https://github.com/simplicitesoftware/module-burgers.git"
 	}
 }]]></mdl_url>
-		<mdl_lastupd>2020-01-17 23:31:40</mdl_lastupd>
+		<mdl_lastupd>2020-01-17 23:39:10</mdl_lastupd>
 		<mdl_comment><![CDATA[### Introduction
 
 This is a sample **Burger shop** application (backend and frontend).
@@ -41,7 +41,7 @@ To import this module:
 In order to have the frontend working the password for the
 webservices-only user `burgers` must be `simplicite`.
 
-This ca ben acheived by importing the follwing XML:
+This can be achieved by importing the following XML:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -55,7 +55,14 @@ This ca ben acheived by importing the follwing XML:
 	</data>
 </object>
 </simplicite>
-```]]></mdl_comment>
+```
+
+### Load data
+
+Some sample data is provided as a module's dataset.
+
+Open this dataset and click on the _Apply_ button after having imported the module and made a full clear cache.
+]]></mdl_comment>
 	</data>
 </object>
 <object>

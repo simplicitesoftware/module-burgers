@@ -38,7 +38,7 @@ To import this module:
 In order to have the frontend working the password for the
 webservices-only user `burgers` must be `simplicite`.
 
-This ca ben acheived by importing the follwing XML:
+This can be achieved by importing the following XML:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -53,6 +53,13 @@ This ca ben acheived by importing the follwing XML:
 </object>
 </simplicite>
 ```
+
+### Load data
+
+Some sample data is provided as a module's dataset.
+
+Open this dataset and click on the _Apply_ button after having imported the module and made a full clear cache.
+
 
 `BRGBurger` business object definition
 --------------------------------------
