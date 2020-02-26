@@ -82,10 +82,10 @@ if (typeof burgers === 'undefined') burgers = (function($) {
 	
 	function render(root, pub, banner) {
 		app = new Simplicite.Ajax(root, 'api', 'burgers', 'simplicite');
-		cus = app.getBusinessObject('BRGCustomer');
-		exc = app.getBusinessObject('BRGExclusion');
-		brg = app.getBusinessObject('BRGBurger');
-		ing = app.getBusinessObject('BRGIngredient');
+		cus = app.getBusinessObject('BrgCustomer');
+		exc = app.getBusinessObject('BrgExclusion');
+		brg = app.getBusinessObject('BrgBurger');
+		ing = app.getBusinessObject('BrgIngredient');
 		brg.toFixed = function() { return function(n, r) { return parseFloat(r(n)).toFixed(2); } };
 		brg.bannerURL = banner;
 		brg.search(function() {

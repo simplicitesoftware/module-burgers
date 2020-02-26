@@ -61,7 +61,7 @@ Some sample data is provided as a module's dataset.
 Open this dataset and click on the _Apply_ button after having imported the module and made a full clear cache.
 
 
-`BRGBurger` business object definition
+`BrgBurger` business object definition
 --------------------------------------
 
 **Burger** business object
@@ -71,15 +71,11 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 | `brgBurgerName`                                              | char(50)                                 | yes*     | yes       |          | Name                                                                             |
-| `brgBugerPrice`                                              | float(5, 2)                              | yes      | yes       |          | Price                                                                            |
+| `brgBurgerPrice`                                             | float(5, 2)                              | yes      | yes       |          | Price                                                                            |
 | `brgBurgerPicture`                                           | image                                    |          | yes       |          | Picture                                                                          |
 | `brgBurgerDescription`                                       | html(100)                                |          | yes       |          | Description                                                                      |
 
-### Custom actions
-
-No custom action
-
-`BRGComposition` business object definition
+`BrgComposition` business object definition
 -------------------------------------------
 
 Burger **composition** business object
@@ -88,17 +84,13 @@ Burger **composition** business object
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
-| `brgCompositionBurgerId` link to **`BRGBurger`**             | id                                       | yes*     | yes       |          | Burger                                                                           |
+| `brgCompositionBurgerId` link to **`BrgBurger`**             | id                                       | yes*     | yes       |          | Burger                                                                           |
 | _Ref. `brgCompositionBurgerId.brgBurgerName`_                | _char(50)_                               |          |           |          | _Name_                                                                           |
-| `brgCompositionIngredientId` link to **`BRGIngredient`**     | id                                       | yes*     | yes       |          | Ingredient                                                                       |
+| `brgCompositionIngredientId` link to **`BrgIngredient`**     | id                                       | yes*     | yes       |          | Ingredient                                                                       |
 | _Ref. `brgCompositionIngredientId.brgIngredientName`_        | _char(50)_                               |          |           |          | _Name_                                                                           |
 | `brgCompositionQuantity`                                     | int(100)                                 | yes      | yes       |          | Quantity                                                                         |
 
-### Custom actions
-
-No custom action
-
-`BRGCustomer` business object definition
+`BrgCustomer` business object definition
 ----------------------------------------
 
 Burger **customer** business object
@@ -112,11 +104,7 @@ Burger **customer** business object
 | `brgCustomerLastname`                                        | char(100)                                | yes      | yes       |          | Last name                                                                        |
 | `brgCustomerFirstname`                                       | char(100)                                | yes      | yes       |          | First name                                                                       |
 
-### Custom actions
-
-No custom action
-
-`BRGExclusion` business object definition
+`BrgExclusion` business object definition
 -----------------------------------------
 
 Burger **user's ingredient exclusion** business object
@@ -125,16 +113,12 @@ Burger **user's ingredient exclusion** business object
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
-| `brgExclusionCustomerId` link to **`BRGCustomer`**           | id                                       | yes*     | yes       |          | Customer                                                                         |
+| `brgExclusionCustomerId` link to **`BrgCustomer`**           | id                                       | yes*     | yes       |          | Customer                                                                         |
 | _Ref. `brgExclusionCustomerId.brgCustomerEmail`_             | _email(100)_                             |          |           |          | _Email_                                                                          |
-| `brgExclusionIngredientId` link to **`BRGIngredient`**       | id                                       | yes*     | yes       |          | Ingredient                                                                       |
+| `brgExclusionIngredientId` link to **`BrgIngredient`**       | id                                       | yes*     | yes       |          | Ingredient                                                                       |
 | _Ref. `brgExclusionIngredientId.brgIngredientName`_          | _char(50)_                               |          |           |          | _Name_                                                                           |
 
-### Custom actions
-
-No custom action
-
-`BRGIngredient` business object definition
+`BrgIngredient` business object definition
 ------------------------------------------
 
 Burger **ingredient**
@@ -146,11 +130,7 @@ Burger **ingredient**
 | `brgIngredientName`                                          | char(50)                                 | yes*     | yes       |          | Name                                                                             |
 | `brgIngredientPrice`                                         | float(5, 2)                              | yes      | yes       |          | Price                                                                            |
 
-### Custom actions
-
-No custom action
-
-`BRGOrder` business object definition
+`BrgOrder` business object definition
 -------------------------------------
 
 Burger **order**
@@ -160,19 +140,15 @@ Burger **order**
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 | `brgOrderDatetime`                                           | datetime                                 | yes*     |           |          | Date and time                                                                    |
-| `brgOrderCustomerId` link to **`BRGCustomer`**               | id                                       | yes*     | yes       |          | Customer                                                                         |
+| `brgOrderCustomerId` link to **`BrgCustomer`**               | id                                       | yes*     | yes       |          | Customer                                                                         |
 | _Ref. `brgOrderCustomerId.brgCustomerEmail`_                 | _email(100)_                             |          |           |          | _Email_                                                                          |
 | _Ref. `brgOrderCustomerId.brgCustomerFirstname`_             | _char(100)_                              |          |           |          | _First name_                                                                     |
 | _Ref. `brgOrderCustomerId.brgCustomerLastname`_              | _char(100)_                              |          |           |          | _Last name_                                                                      |
-| `brgOrderBurgerId` link to **`BRGBurger`**                   | id                                       | yes*     | yes       |          | Burger                                                                           |
+| `brgOrderBurgerId` link to **`BrgBurger`**                   | id                                       | yes*     | yes       |          | Burger                                                                           |
 | _Ref. `brgOrderBurgerId.brgBurgerName`_                      | _char(50)_                               |          |           |          | _Name_                                                                           |
-| _Ref. `brgOrderBurgerId.brgBugerPrice`_                      | _float(5, 2)_                            |          |           |          | _Price_                                                                          |
+| _Ref. `brgOrderBurgerId.brgBurgerPrice`_                     | _float(5, 2)_                            |          |           |          | _Price_                                                                          |
 | `brgOrderComposition`                                        | text(10000)                              |          |           |          | Composition                                                                      |
 | `brgOrderDate`                                               | date                                     |          |           |          | Date                                                                             |
-
-### Custom actions
-
-No custom action
 
 `burgers` external object definition
 ------------------------------------

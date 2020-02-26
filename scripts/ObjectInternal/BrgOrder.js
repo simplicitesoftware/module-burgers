@@ -1,12 +1,12 @@
-BRGOrder.preValidate = function() {
+BrgOrder.preValidate = function() {
 	// Ingrédients du burger
-	var c = this.getGrant().getTmpObject("BRGComposition");
+	var c = this.getGrant().getTmpObject("BrgComposition");
 	c.resetFilters();
 	c.getField("brgCompositionBurgerId").setFilter(this.getFieldValue("brgOrderBurgerId"));
 	var compositions = c.search();
 	
 	// Exclusions du client
-	var e = this.getGrant().getTmpObject("BRGExclusion");
+	var e = this.getGrant().getTmpObject("BrgExclusion");
 	e.resetFilters();
 	e.getField("brgExclusionCustomerId").setFilter(this.getFieldValue("brgOrderCustomerId"));
 	var exclusions = e.search();

@@ -6,14 +6,14 @@
 	<data>
 		<mdl_name>Burgers</mdl_name>
 		<mdl_version>1.0</mdl_version>
-		<mdl_prefix/>
+		<mdl_prefix>brg</mdl_prefix>
 		<mdl_url><![CDATA[{
 	"type": "git",
 	"origin": {
 		"uri": "https://github.com/simplicitesoftware/module-burgers.git"
 	}
 }]]></mdl_url>
-		<mdl_lastupd>2020-01-17 23:39:10</mdl_lastupd>
+		<mdl_lastupd>2020-02-26 23:51:27</mdl_lastupd>
 		<mdl_comment><![CDATA[### Introduction
 
 This is a sample **Burger shop** application (backend and frontend).
@@ -146,7 +146,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<usr_extra>1</usr_extra>
 		<usr_subhead>1</usr_subhead>
 		<usr_logout>2018-08-30 00:11:12</usr_logout>
-		<usr_last_logon>2020-01-13 13:07:27</usr_last_logon>
+		<usr_last_logon>2020-02-27 00:19:19</usr_last_logon>
 		<usr_dateformat/>
 		<usr_uuid>de1049ce-bd3c-442d-bcad-04640dec3bf4</usr_uuid>
 	</data>
@@ -281,43 +281,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<name>Field</name>
 	<action>upsert</action>
 	<data>
-		<fld_name>brgBugerPrice</fld_name>
-		<fld_dbname>burger_price</fld_dbname>
-		<fld_visible>3</fld_visible>
-		<fld_updatable>1</fld_updatable>
-		<fld_required>1</fld_required>
-		<fld_fonctid>0</fld_fonctid>
-		<fld_research>4</fld_research>
-		<fld_researchreq>0</fld_researchreq>
-		<fld_sort>C</fld_sort>
-		<fld_more>0</fld_more>
-		<fld_listmore>0</fld_listmore>
-		<fld_listsum/>
-		<fld_tray>0</fld_tray>
-		<fld_type>2</fld_type>
-		<fld_type_id.flt_code/>
-		<fld_enumlist/>
-		<fld_list_id.lov_name/>
-		<fld_copy>1</fld_copy>
-		<fld_size>5</fld_size>
-		<fld_minsize/>
-		<fld_precision>2</fld_precision>
-		<fld_fromdate_id.fld_name/>
-		<fld_dfault><![CDATA[0]]></fld_dfault>
-		<fld_indexable>0</fld_indexable>
-		<fld_autocomp>0</fld_autocomp>
-		<fld_groupby>0</fld_groupby>
-		<fld_updall>1</fld_updall>
-		<fld_case/>
-		<fld_righttoleft>0</fld_righttoleft>
-		<fld_rendering>EURO</fld_rendering>
-		<fld_calc/>
-		<fld_objlist/>
-		<fld_comment><![CDATA[Price]]></fld_comment>
-		<fld_classification/>
-		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
-	</data>
-	<data>
 		<fld_name>brgBurgerDescription</fld_name>
 		<fld_dbname>burger_description</fld_dbname>
 		<fld_visible>2</fld_visible>
@@ -425,6 +388,43 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Picture]]></fld_comment>
+		<fld_classification/>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>brgBurgerPrice</fld_name>
+		<fld_dbname>burger_price</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>1</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>4</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray>0</fld_tray>
+		<fld_type>2</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_enumlist/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>5</fld_size>
+		<fld_minsize/>
+		<fld_precision>2</fld_precision>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault><![CDATA[0]]></fld_dfault>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering>EURO</fld_rendering>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment><![CDATA[Price]]></fld_comment>
 		<fld_classification/>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
@@ -1033,7 +1033,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
         <div class="field" data-field="brgBurgerName"></div>
       </div>
       <div class="col-sm-4">
-        <div class="field" data-field="brgBugerPrice"></div>
+        <div class="field" data-field="brgBurgerPrice"></div>
       </div>
     </div>
     <div class="field" data-field="brgBurgerDescription"></div>
@@ -1147,7 +1147,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<ofa_title>1</ofa_title>
 		<ofa_ui><![CDATA[<div>
   <div class="field" data-field="brgBurgerName"></div>
-  <div class="field" data-field="brgBugerPrice"></div>
+  <div class="field" data-field="brgBurgerPrice"></div>
   <div class="field" data-field="brgBurgerPicture"></div>
   <div class="field" data-field="brgBurgerDescription"></div>
 </div>
@@ -1205,7 +1205,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<name>ObjectInternal</name>
 	<action>upsert</action>
 	<data>
-		<obo_name>BRGBurger</obo_name>
+		<obo_name>BrgBurger</obo_name>
 		<obo_dbtable>brg_burger</obo_dbtable>
 		<obo_class/>
 		<obo_script_id/>
@@ -1261,11 +1261,13 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
-		<obo_prefix/>
+		<obo_prefix>burger</obo_prefix>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
-		<obo_name>BRGComposition</obo_name>
+		<obo_name>BrgComposition</obo_name>
 		<obo_dbtable>brg_composition</obo_dbtable>
 		<obo_class/>
 		<obo_script_id/>
@@ -1321,11 +1323,13 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
-		<obo_prefix/>
+		<obo_prefix>composition</obo_prefix>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
-		<obo_name>BRGCustomer</obo_name>
+		<obo_name>BrgCustomer</obo_name>
 		<obo_dbtable>brg_customer</obo_dbtable>
 		<obo_class/>
 		<obo_script_id/>
@@ -1381,11 +1385,13 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
-		<obo_prefix/>
+		<obo_prefix>customer</obo_prefix>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
-		<obo_name>BRGExclusion</obo_name>
+		<obo_name>BrgExclusion</obo_name>
 		<obo_dbtable>brg_exclusion</obo_dbtable>
 		<obo_class/>
 		<obo_script_id/>
@@ -1441,11 +1447,13 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
-		<obo_prefix/>
+		<obo_prefix>exclusion</obo_prefix>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
-		<obo_name>BRGIngredient</obo_name>
+		<obo_name>BrgIngredient</obo_name>
 		<obo_dbtable>brg_ingredient</obo_dbtable>
 		<obo_class/>
 		<obo_script_id/>
@@ -1501,14 +1509,16 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
-		<obo_prefix/>
+		<obo_prefix>ingredient</obo_prefix>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
-		<obo_name>BRGOrder</obo_name>
+		<obo_name>BrgOrder</obo_name>
 		<obo_dbtable>brg_order</obo_dbtable>
 		<obo_class/>
-		<obo_script_id>scripts/ObjectInternal/BRGOrder.js</obo_script_id>
+		<obo_script_id>scripts/ObjectInternal/BrgOrder.js</obo_script_id>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>1</obo_nosearch>
 		<obo_comment><![CDATA[Burger **order**]]></obo_comment>
@@ -1561,15 +1571,17 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
-		<obo_prefix/>
+		<obo_prefix>order</obo_prefix>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 </object>
 <object>
 	<name>ObjectFieldSystem</name>
 	<action>upsert</action>
 	<data>
-		<obf_object_id.obo_name>BRGBurger</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgBurger</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgBurgerName</obf_field_id.fld_name>
 		<obf_field_id.fld_type>3</obf_field_id.fld_type>
 		<obf_order>10</obf_order>
@@ -1598,8 +1610,8 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGBurger</obf_object_id.obo_name>
-		<obf_field_id.fld_name>brgBugerPrice</obf_field_id.fld_name>
+		<obf_object_id.obo_name>BrgBurger</obf_object_id.obo_name>
+		<obf_field_id.fld_name>brgBurgerPrice</obf_field_id.fld_name>
 		<obf_field_id.fld_type>2</obf_field_id.fld_type>
 		<obf_order>20</obf_order>
 		<obf_group_by/>
@@ -1627,7 +1639,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGBurger</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgBurger</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgBurgerPicture</obf_field_id.fld_name>
 		<obf_field_id.fld_type>20</obf_field_id.fld_type>
 		<obf_order>30</obf_order>
@@ -1656,7 +1668,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGBurger</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgBurger</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgBurgerDescription</obf_field_id.fld_name>
 		<obf_field_id.fld_type>11</obf_field_id.fld_type>
 		<obf_order>40</obf_order>
@@ -1685,7 +1697,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGComposition</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgComposition</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgCompositionBurgerId</obf_field_id.fld_name>
 		<obf_field_id.fld_type>0</obf_field_id.fld_type>
 		<obf_order>100</obf_order>
@@ -1693,7 +1705,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_ref_object_id.obo_name>BRGBurger</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgBurger</obf_ref_object_id.obo_name>
 		<obf_cascad>C</obf_cascad>
 		<obf_card>0,n</obf_card>
 		<obf_visible>1</obf_visible>
@@ -1714,7 +1726,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGComposition</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgComposition</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgBurgerName</obf_field_id.fld_name>
 		<obf_field_id.fld_type>3</obf_field_id.fld_type>
 		<obf_order>110</obf_order>
@@ -1722,7 +1734,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order>1</obf_dfault_order>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>brgCompositionBurgerId</obf_ref_field_id.fld_name>
-		<obf_ref_object_id.obo_name>BRGBurger</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgBurger</obf_ref_object_id.obo_name>
 		<obf_cascad/>
 		<obf_card/>
 		<obf_visible/>
@@ -1743,7 +1755,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGComposition</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgComposition</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgCompositionIngredientId</obf_field_id.fld_name>
 		<obf_field_id.fld_type>0</obf_field_id.fld_type>
 		<obf_order>200</obf_order>
@@ -1751,7 +1763,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_ref_object_id.obo_name>BRGIngredient</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgIngredient</obf_ref_object_id.obo_name>
 		<obf_cascad>C</obf_cascad>
 		<obf_card>0,n</obf_card>
 		<obf_visible>1</obf_visible>
@@ -1772,7 +1784,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGComposition</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgComposition</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgIngredientName</obf_field_id.fld_name>
 		<obf_field_id.fld_type>3</obf_field_id.fld_type>
 		<obf_order>210</obf_order>
@@ -1780,7 +1792,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order>2</obf_dfault_order>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>brgCompositionIngredientId</obf_ref_field_id.fld_name>
-		<obf_ref_object_id.obo_name>BRGIngredient</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgIngredient</obf_ref_object_id.obo_name>
 		<obf_cascad/>
 		<obf_card/>
 		<obf_visible/>
@@ -1801,7 +1813,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGComposition</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgComposition</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgCompositionQuantity</obf_field_id.fld_name>
 		<obf_field_id.fld_type>1</obf_field_id.fld_type>
 		<obf_order>220</obf_order>
@@ -1830,7 +1842,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGCustomer</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgCustomer</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgCustomerEmail</obf_field_id.fld_name>
 		<obf_field_id.fld_type>12</obf_field_id.fld_type>
 		<obf_order>10</obf_order>
@@ -1859,7 +1871,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGCustomer</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgCustomer</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgCustomerPhone</obf_field_id.fld_name>
 		<obf_field_id.fld_type>22</obf_field_id.fld_type>
 		<obf_order>20</obf_order>
@@ -1888,7 +1900,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGCustomer</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgCustomer</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgCustomerLastname</obf_field_id.fld_name>
 		<obf_field_id.fld_type>3</obf_field_id.fld_type>
 		<obf_order>30</obf_order>
@@ -1917,7 +1929,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGCustomer</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgCustomer</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgCustomerFirstname</obf_field_id.fld_name>
 		<obf_field_id.fld_type>3</obf_field_id.fld_type>
 		<obf_order>40</obf_order>
@@ -1946,7 +1958,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGExclusion</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgExclusion</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgExclusionCustomerId</obf_field_id.fld_name>
 		<obf_field_id.fld_type>0</obf_field_id.fld_type>
 		<obf_order>100</obf_order>
@@ -1954,7 +1966,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_ref_object_id.obo_name>BRGCustomer</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgCustomer</obf_ref_object_id.obo_name>
 		<obf_cascad>C</obf_cascad>
 		<obf_card>0,n</obf_card>
 		<obf_visible>1</obf_visible>
@@ -1975,7 +1987,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGExclusion</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgExclusion</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgCustomerEmail</obf_field_id.fld_name>
 		<obf_field_id.fld_type>12</obf_field_id.fld_type>
 		<obf_order>110</obf_order>
@@ -1983,7 +1995,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order>1</obf_dfault_order>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>brgExclusionCustomerId</obf_ref_field_id.fld_name>
-		<obf_ref_object_id.obo_name>BRGCustomer</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgCustomer</obf_ref_object_id.obo_name>
 		<obf_cascad/>
 		<obf_card/>
 		<obf_visible/>
@@ -2004,7 +2016,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGExclusion</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgExclusion</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgExclusionIngredientId</obf_field_id.fld_name>
 		<obf_field_id.fld_type>0</obf_field_id.fld_type>
 		<obf_order>200</obf_order>
@@ -2012,7 +2024,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_ref_object_id.obo_name>BRGIngredient</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgIngredient</obf_ref_object_id.obo_name>
 		<obf_cascad>C</obf_cascad>
 		<obf_card>0,n</obf_card>
 		<obf_visible>1</obf_visible>
@@ -2033,7 +2045,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGExclusion</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgExclusion</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgIngredientName</obf_field_id.fld_name>
 		<obf_field_id.fld_type>3</obf_field_id.fld_type>
 		<obf_order>210</obf_order>
@@ -2041,7 +2053,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order>2</obf_dfault_order>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>brgExclusionIngredientId</obf_ref_field_id.fld_name>
-		<obf_ref_object_id.obo_name>BRGIngredient</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgIngredient</obf_ref_object_id.obo_name>
 		<obf_cascad/>
 		<obf_card/>
 		<obf_visible/>
@@ -2062,7 +2074,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGIngredient</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgIngredient</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgIngredientName</obf_field_id.fld_name>
 		<obf_field_id.fld_type>3</obf_field_id.fld_type>
 		<obf_order>10</obf_order>
@@ -2091,7 +2103,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGIngredient</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgIngredient</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgIngredientPrice</obf_field_id.fld_name>
 		<obf_field_id.fld_type>2</obf_field_id.fld_type>
 		<obf_order>20</obf_order>
@@ -2120,7 +2132,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGOrder</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgOrder</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgOrderDatetime</obf_field_id.fld_name>
 		<obf_field_id.fld_type>5</obf_field_id.fld_type>
 		<obf_order>10</obf_order>
@@ -2149,7 +2161,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGOrder</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgOrder</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgOrderCustomerId</obf_field_id.fld_name>
 		<obf_field_id.fld_type>0</obf_field_id.fld_type>
 		<obf_order>100</obf_order>
@@ -2157,7 +2169,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_ref_object_id.obo_name>BRGCustomer</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgCustomer</obf_ref_object_id.obo_name>
 		<obf_cascad>C</obf_cascad>
 		<obf_card>0,n</obf_card>
 		<obf_visible>1</obf_visible>
@@ -2178,7 +2190,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGOrder</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgOrder</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgCustomerEmail</obf_field_id.fld_name>
 		<obf_field_id.fld_type>12</obf_field_id.fld_type>
 		<obf_order>110</obf_order>
@@ -2186,7 +2198,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order>1</obf_dfault_order>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>brgOrderCustomerId</obf_ref_field_id.fld_name>
-		<obf_ref_object_id.obo_name>BRGCustomer</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgCustomer</obf_ref_object_id.obo_name>
 		<obf_cascad/>
 		<obf_card/>
 		<obf_visible/>
@@ -2207,7 +2219,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGOrder</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgOrder</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgCustomerFirstname</obf_field_id.fld_name>
 		<obf_field_id.fld_type>3</obf_field_id.fld_type>
 		<obf_order>120</obf_order>
@@ -2215,7 +2227,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>brgOrderCustomerId</obf_ref_field_id.fld_name>
-		<obf_ref_object_id.obo_name>BRGCustomer</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgCustomer</obf_ref_object_id.obo_name>
 		<obf_cascad/>
 		<obf_card/>
 		<obf_visible/>
@@ -2236,7 +2248,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGOrder</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgOrder</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgCustomerLastname</obf_field_id.fld_name>
 		<obf_field_id.fld_type>3</obf_field_id.fld_type>
 		<obf_order>140</obf_order>
@@ -2244,7 +2256,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>brgOrderCustomerId</obf_ref_field_id.fld_name>
-		<obf_ref_object_id.obo_name>BRGCustomer</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgCustomer</obf_ref_object_id.obo_name>
 		<obf_cascad/>
 		<obf_card/>
 		<obf_visible/>
@@ -2265,7 +2277,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGOrder</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgOrder</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgOrderBurgerId</obf_field_id.fld_name>
 		<obf_field_id.fld_type>0</obf_field_id.fld_type>
 		<obf_order>200</obf_order>
@@ -2273,7 +2285,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name/>
-		<obf_ref_object_id.obo_name>BRGBurger</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgBurger</obf_ref_object_id.obo_name>
 		<obf_cascad>C</obf_cascad>
 		<obf_card>0,n</obf_card>
 		<obf_visible>1</obf_visible>
@@ -2294,7 +2306,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGOrder</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgOrder</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgBurgerName</obf_field_id.fld_name>
 		<obf_field_id.fld_type>3</obf_field_id.fld_type>
 		<obf_order>210</obf_order>
@@ -2302,7 +2314,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>brgOrderBurgerId</obf_ref_field_id.fld_name>
-		<obf_ref_object_id.obo_name>BRGBurger</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgBurger</obf_ref_object_id.obo_name>
 		<obf_cascad/>
 		<obf_card/>
 		<obf_visible/>
@@ -2323,15 +2335,15 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGOrder</obf_object_id.obo_name>
-		<obf_field_id.fld_name>brgBugerPrice</obf_field_id.fld_name>
+		<obf_object_id.obo_name>BrgOrder</obf_object_id.obo_name>
+		<obf_field_id.fld_name>brgBurgerPrice</obf_field_id.fld_name>
 		<obf_field_id.fld_type>2</obf_field_id.fld_type>
 		<obf_order>210</obf_order>
 		<obf_group_by/>
 		<obf_dfault_order/>
 		<obf_input/>
 		<obf_ref_field_id.fld_name>brgOrderBurgerId</obf_ref_field_id.fld_name>
-		<obf_ref_object_id.obo_name>BRGBurger</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgBurger</obf_ref_object_id.obo_name>
 		<obf_cascad/>
 		<obf_card/>
 		<obf_visible/>
@@ -2352,7 +2364,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGOrder</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgOrder</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgOrderComposition</obf_field_id.fld_name>
 		<obf_field_id.fld_type>13</obf_field_id.fld_type>
 		<obf_order>300</obf_order>
@@ -2381,7 +2393,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_object_id.obo_name>BRGOrder</obf_object_id.obo_name>
+		<obf_object_id.obo_name>BrgOrder</obf_object_id.obo_name>
 		<obf_field_id.fld_name>brgOrderDate</obf_field_id.fld_name>
 		<obf_field_id.fld_type>4</obf_field_id.fld_type>
 		<obf_order>310</obf_order>
@@ -2414,10 +2426,10 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<name>Link</name>
 	<action>upsert</action>
 	<data>
-		<obf_ref_object_id.obo_name>BRGBurger</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgBurger</obf_ref_object_id.obo_name>
 		<obf_order>100</obf_order>
 		<obf_ref_order>1</obf_ref_order>
-		<obf_object_id.obj_name>BRGComposition</obf_object_id.obj_name>
+		<obf_object_id.obj_name>BrgComposition</obf_object_id.obj_name>
 		<obf_field_id.fld_name>brgCompositionBurgerId</obf_field_id.fld_name>
 		<obf_field_id.fld_dbname>composition_burger_id</obf_field_id.fld_dbname>
 		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
@@ -2438,10 +2450,10 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_ref_object_id.obo_name>BRGBurger</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgBurger</obf_ref_object_id.obo_name>
 		<obf_order>200</obf_order>
 		<obf_ref_order>2</obf_ref_order>
-		<obf_object_id.obj_name>BRGOrder</obf_object_id.obj_name>
+		<obf_object_id.obj_name>BrgOrder</obf_object_id.obj_name>
 		<obf_field_id.fld_name>brgOrderBurgerId</obf_field_id.fld_name>
 		<obf_field_id.fld_dbname>order_burger_id</obf_field_id.fld_dbname>
 		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
@@ -2462,10 +2474,10 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_ref_object_id.obo_name>BRGCustomer</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgCustomer</obf_ref_object_id.obo_name>
 		<obf_order>100</obf_order>
 		<obf_ref_order>1</obf_ref_order>
-		<obf_object_id.obj_name>BRGExclusion</obf_object_id.obj_name>
+		<obf_object_id.obj_name>BrgExclusion</obf_object_id.obj_name>
 		<obf_field_id.fld_name>brgExclusionCustomerId</obf_field_id.fld_name>
 		<obf_field_id.fld_dbname>exclusion_customer_id</obf_field_id.fld_dbname>
 		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
@@ -2486,10 +2498,10 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_ref_object_id.obo_name>BRGCustomer</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgCustomer</obf_ref_object_id.obo_name>
 		<obf_order>100</obf_order>
 		<obf_ref_order>2</obf_ref_order>
-		<obf_object_id.obj_name>BRGOrder</obf_object_id.obj_name>
+		<obf_object_id.obj_name>BrgOrder</obf_object_id.obj_name>
 		<obf_field_id.fld_name>brgOrderCustomerId</obf_field_id.fld_name>
 		<obf_field_id.fld_dbname>order_customer_id</obf_field_id.fld_dbname>
 		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
@@ -2510,10 +2522,10 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_ref_object_id.obo_name>BRGIngredient</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgIngredient</obf_ref_object_id.obo_name>
 		<obf_order>200</obf_order>
 		<obf_ref_order>1</obf_ref_order>
-		<obf_object_id.obj_name>BRGComposition</obf_object_id.obj_name>
+		<obf_object_id.obj_name>BrgComposition</obf_object_id.obj_name>
 		<obf_field_id.fld_name>brgCompositionIngredientId</obf_field_id.fld_name>
 		<obf_field_id.fld_dbname>composition_ingredient_id</obf_field_id.fld_dbname>
 		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
@@ -2534,10 +2546,10 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 	<data>
-		<obf_ref_object_id.obo_name>BRGIngredient</obf_ref_object_id.obo_name>
+		<obf_ref_object_id.obo_name>BrgIngredient</obf_ref_object_id.obo_name>
 		<obf_order>200</obf_order>
 		<obf_ref_order>2</obf_ref_order>
-		<obf_object_id.obj_name>BRGExclusion</obf_object_id.obj_name>
+		<obf_object_id.obj_name>BrgExclusion</obf_object_id.obj_name>
 		<obf_field_id.fld_name>brgExclusionIngredientId</obf_field_id.fld_name>
 		<obf_field_id.fld_dbname>exclusion_ingredient_id</obf_field_id.fld_dbname>
 		<obf_field_id.fld_updatable>1</obf_field_id.fld_updatable>
@@ -2564,7 +2576,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<fct_name>BRGBurger-CUD</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>BRGBurger</fct_object_id.obj_name>
+		<fct_object_id.obj_name>BrgBurger</fct_object_id.obj_name>
 		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
@@ -2573,7 +2585,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<fct_name>BRGBurger-R</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>BRGBurger</fct_object_id.obj_name>
+		<fct_object_id.obj_name>BrgBurger</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
@@ -2582,7 +2594,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<fct_name>BRGCompositiont-CUD</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>BRGComposition</fct_object_id.obj_name>
+		<fct_object_id.obj_name>BrgComposition</fct_object_id.obj_name>
 		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
@@ -2591,7 +2603,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<fct_name>BRGCustomers-CUD</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>BRGCustomer</fct_object_id.obj_name>
+		<fct_object_id.obj_name>BrgCustomer</fct_object_id.obj_name>
 		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
@@ -2600,7 +2612,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<fct_name>BRGExclusion-CUD</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>BRGExclusion</fct_object_id.obj_name>
+		<fct_object_id.obj_name>BrgExclusion</fct_object_id.obj_name>
 		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
@@ -2609,7 +2621,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<fct_name>BRGIngredient-CUD</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>BRGIngredient</fct_object_id.obj_name>
+		<fct_object_id.obj_name>BrgIngredient</fct_object_id.obj_name>
 		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
@@ -2618,7 +2630,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<fct_name>BRGOrder-CUD</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>BRGOrder</fct_object_id.obj_name>
+		<fct_object_id.obj_name>BrgOrder</fct_object_id.obj_name>
 		<fct_function>CMS</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
@@ -2627,7 +2639,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<fct_name>BRGOrder-R</fct_name>
 		<fct_object_id.obj_type>O</fct_object_id.obj_type>
-		<fct_object_id.obj_name>BRGOrder</fct_object_id.obj_name>
+		<fct_object_id.obj_name>BrgOrder</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
 		<fct_action_id.act_name/>
 		<fct_view_id.viw_name/>
@@ -2659,7 +2671,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<grt_group_id.grp_name>BRG_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>BRGBurger-CUD</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>BRGBurger</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>BrgBurger</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -2669,7 +2681,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<grt_group_id.grp_name>BRG_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>BRGCompositiont-CUD</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>BRGComposition</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>BrgComposition</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -2679,7 +2691,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<grt_group_id.grp_name>BRG_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>BRGCustomers-CUD</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>BRGCustomer</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>BrgCustomer</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -2689,7 +2701,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<grt_group_id.grp_name>BRG_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>BRGExclusion-CUD</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>BRGExclusion</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>BrgExclusion</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -2699,7 +2711,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<grt_group_id.grp_name>BRG_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>BRGIngredient-CUD</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>BRGIngredient</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>BrgIngredient</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -2709,7 +2721,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<grt_group_id.grp_name>BRG_ADMIN</grt_group_id.grp_name>
 		<grt_function_id.fct_name>BRGOrder-CUD</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>BRGOrder</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>BrgOrder</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>CMS</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -2739,7 +2751,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<grt_group_id.grp_name>BRG_PUBLIC</grt_group_id.grp_name>
 		<grt_function_id.fct_name>BRGBurger-R</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>O</grt_function_id.fct_object_id.obj_type>
-		<grt_function_id.fct_object_id.obj_name>BRGBurger</grt_function_id.fct_object_id.obj_name>
+		<grt_function_id.fct_object_id.obj_name>BrgBurger</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
 		<grt_function_id.fct_function>L</grt_function_id.fct_function>
 		<grt_activ>1</grt_activ>
@@ -2761,7 +2773,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<action>upsert</action>
 	<data>
 		<ctb_name>BRGOrderStats</ctb_name>
-		<ctb_object_id.obo_name>BRGOrder</ctb_object_id.obo_name>
+		<ctb_object_id.obo_name>BrgOrder</ctb_object_id.obo_name>
 		<ctb_function>S</ctb_function>
 		<ctb_grantable>0</ctb_grantable>
 		<ctb_visible>1</ctb_visible>
@@ -2778,7 +2790,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<action>upsert</action>
 	<data>
 		<cax_crosstab_id.ctb_name>BRGOrderStats</cax_crosstab_id.ctb_name>
-		<cax_objfield_id.obf_object_id.obo_name>BRGOrder</cax_objfield_id.obf_object_id.obo_name>
+		<cax_objfield_id.obf_object_id.obo_name>BrgOrder</cax_objfield_id.obf_object_id.obo_name>
 		<cax_objfield_id.obf_order>310</cax_objfield_id.obf_order>
 		<cax_objfield_id.obf_field_id.fld_name>brgOrderDate</cax_objfield_id.obf_field_id.fld_name>
 		<cax_type>C</cax_type>
@@ -2798,7 +2810,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<cax_crosstab_id.ctb_name>BRGOrderStats</cax_crosstab_id.ctb_name>
-		<cax_objfield_id.obf_object_id.obo_name>BRGOrder</cax_objfield_id.obf_object_id.obo_name>
+		<cax_objfield_id.obf_object_id.obo_name>BrgOrder</cax_objfield_id.obf_object_id.obo_name>
 		<cax_objfield_id.obf_order>210</cax_objfield_id.obf_order>
 		<cax_objfield_id.obf_field_id.fld_name>brgBurgerName</cax_objfield_id.obf_field_id.fld_name>
 		<cax_type>L</cax_type>
@@ -2818,9 +2830,9 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<cax_crosstab_id.ctb_name>BRGOrderStats</cax_crosstab_id.ctb_name>
-		<cax_objfield_id.obf_object_id.obo_name>BRGOrder</cax_objfield_id.obf_object_id.obo_name>
+		<cax_objfield_id.obf_object_id.obo_name>BrgOrder</cax_objfield_id.obf_object_id.obo_name>
 		<cax_objfield_id.obf_order>210</cax_objfield_id.obf_order>
-		<cax_objfield_id.obf_field_id.fld_name>brgBugerPrice</cax_objfield_id.obf_field_id.fld_name>
+		<cax_objfield_id.obf_field_id.fld_name>brgBurgerPrice</cax_objfield_id.obf_field_id.fld_name>
 		<cax_type>V</cax_type>
 		<cax_order>1</cax_order>
 		<cax_function/>
@@ -2851,7 +2863,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<action>upsert</action>
 	<data>
 		<map_domain_id.obd_name>BurgersDomain</map_domain_id.obd_name>
-		<map_object_id.obj_name>BRGBurger</map_object_id.obj_name>
+		<map_object_id.obj_name>BrgBurger</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>72000</map_order>
 		<map_ext>0</map_ext>
@@ -2859,7 +2871,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<map_domain_id.obd_name>BurgersDomain</map_domain_id.obd_name>
-		<map_object_id.obj_name>BRGIngredient</map_object_id.obj_name>
+		<map_object_id.obj_name>BrgIngredient</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>72010</map_order>
 		<map_ext>0</map_ext>
@@ -2867,7 +2879,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<map_domain_id.obd_name>BurgersDomain</map_domain_id.obd_name>
-		<map_object_id.obj_name>BRGCustomer</map_object_id.obj_name>
+		<map_object_id.obj_name>BrgCustomer</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>72020</map_order>
 		<map_ext>0</map_ext>
@@ -2875,7 +2887,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<map_domain_id.obd_name>BurgersDomain</map_domain_id.obd_name>
-		<map_object_id.obj_name>BRGOrder</map_object_id.obj_name>
+		<map_object_id.obj_name>BrgOrder</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>72030</map_order>
 		<map_ext>0</map_ext>
@@ -3067,18 +3079,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<action>upsert</action>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
-		<tsl_id.fld_name>brgBugerPrice</tsl_id.fld_name>
-		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Burger price</tsl_value>
-		<tsl_simplehelp/>
-		<tsl_short_value/>
-		<tsl_placeholder/>
-		<tsl_listhelp/>
-		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
-		<tsl_tooltip/>
-	</data>
-	<data>
-		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>brgBurgerDescription</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Description of the burger</tsl_value>
@@ -3106,6 +3106,18 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<tsl_id.fld_name>brgBurgerPicture</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Picture of the burger</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>brgBurgerPrice</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Burger price</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
@@ -3307,18 +3319,6 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
-		<tsl_id.fld_name>brgBugerPrice</tsl_id.fld_name>
-		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Prix du burger</tsl_value>
-		<tsl_simplehelp/>
-		<tsl_short_value/>
-		<tsl_placeholder/>
-		<tsl_listhelp/>
-		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
-		<tsl_tooltip/>
-	</data>
-	<data>
-		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>brgBurgerDescription</tsl_id.fld_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Description du burger</tsl_value>
@@ -3346,6 +3346,18 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<tsl_id.fld_name>brgBurgerPicture</tsl_id.fld_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Photo du burger</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>brgBurgerPrice</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>Prix du burger</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
@@ -3603,7 +3615,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<action>upsert</action>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>BRGBurger</tsl_id.obo_name>
+		<tsl_id.obo_name>BrgBurger</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Burger</tsl_value>
 		<tsl_help/>
@@ -3611,7 +3623,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>BRGComposition</tsl_id.obo_name>
+		<tsl_id.obo_name>BrgComposition</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Burger's ingredient</tsl_value>
 		<tsl_help/>
@@ -3619,7 +3631,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>BRGCustomer</tsl_id.obo_name>
+		<tsl_id.obo_name>BrgCustomer</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Customer|Customers</tsl_value>
 		<tsl_help/>
@@ -3627,7 +3639,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>BRGExclusion</tsl_id.obo_name>
+		<tsl_id.obo_name>BrgExclusion</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Exclusion</tsl_value>
 		<tsl_help/>
@@ -3635,7 +3647,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>BRGIngredient</tsl_id.obo_name>
+		<tsl_id.obo_name>BrgIngredient</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Ingredient|Ingredients</tsl_value>
 		<tsl_help/>
@@ -3643,7 +3655,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>BRGOrder</tsl_id.obo_name>
+		<tsl_id.obo_name>BrgOrder</tsl_id.obo_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Order|Orders</tsl_value>
 		<tsl_help/>
@@ -3651,7 +3663,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>BRGBurger</tsl_id.obo_name>
+		<tsl_id.obo_name>BrgBurger</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Burger</tsl_value>
 		<tsl_help/>
@@ -3659,7 +3671,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>BRGComposition</tsl_id.obo_name>
+		<tsl_id.obo_name>BrgComposition</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Ingrédient du burger</tsl_value>
 		<tsl_help/>
@@ -3667,7 +3679,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>BRGCustomer</tsl_id.obo_name>
+		<tsl_id.obo_name>BrgCustomer</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Client|Clients</tsl_value>
 		<tsl_help/>
@@ -3675,7 +3687,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>BRGExclusion</tsl_id.obo_name>
+		<tsl_id.obo_name>BrgExclusion</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Exclusion</tsl_value>
 		<tsl_help/>
@@ -3683,7 +3695,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>BRGIngredient</tsl_id.obo_name>
+		<tsl_id.obo_name>BrgIngredient</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Ingrédient|Ingrédients</tsl_value>
 		<tsl_help/>
@@ -3691,7 +3703,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObject>O</tsl_typeObject>
-		<tsl_id.obo_name>BRGOrder</tsl_id.obo_name>
+		<tsl_id.obo_name>BrgOrder</tsl_id.obo_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Commande|Commandes</tsl_value>
 		<tsl_help/>
@@ -3733,7 +3745,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<action>upsert</action>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGComposition</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgComposition</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgBurgerName</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>110</tsl_id.obf_order>
 		<tsl_lang>ENU</tsl_lang>
@@ -3746,7 +3758,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGComposition</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgComposition</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgIngredientName</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>210</tsl_id.obf_order>
 		<tsl_lang>ENU</tsl_lang>
@@ -3759,7 +3771,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGExclusion</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgExclusion</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgCustomerEmail</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>110</tsl_id.obf_order>
 		<tsl_lang>ENU</tsl_lang>
@@ -3772,7 +3784,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGExclusion</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgExclusion</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgIngredientName</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>210</tsl_id.obf_order>
 		<tsl_lang>ENU</tsl_lang>
@@ -3785,7 +3797,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGOrder</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgOrder</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgCustomerEmail</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>110</tsl_id.obf_order>
 		<tsl_lang>ENU</tsl_lang>
@@ -3798,7 +3810,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGOrder</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgOrder</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgCustomerFirstname</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>120</tsl_id.obf_order>
 		<tsl_lang>ENU</tsl_lang>
@@ -3811,7 +3823,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGOrder</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgOrder</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgCustomerLastname</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>140</tsl_id.obf_order>
 		<tsl_lang>ENU</tsl_lang>
@@ -3824,20 +3836,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGOrder</tsl_id.obf_object_id.obo_name>
-		<tsl_id.obf_field_id.fld_name>brgBugerPrice</tsl_id.obf_field_id.fld_name>
-		<tsl_id.obf_order>210</tsl_id.obf_order>
-		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Burger price</tsl_value>
-		<tsl_simplehelp/>
-		<tsl_short_value/>
-		<tsl_listhelp/>
-		<tsl_placeholder/>
-		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
-	</data>
-	<data>
-		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGOrder</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgOrder</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgBurgerName</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>210</tsl_id.obf_order>
 		<tsl_lang>ENU</tsl_lang>
@@ -3850,7 +3849,20 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGComposition</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgOrder</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_field_id.fld_name>brgBurgerPrice</tsl_id.obf_field_id.fld_name>
+		<tsl_id.obf_order>210</tsl_id.obf_order>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Burger price</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_listhelp/>
+		<tsl_placeholder/>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeObjectField>L</tsl_typeObjectField>
+		<tsl_id.obf_object_id.obo_name>BrgComposition</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgBurgerName</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>110</tsl_id.obf_order>
 		<tsl_lang>FRA</tsl_lang>
@@ -3863,7 +3875,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGComposition</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgComposition</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgIngredientName</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>210</tsl_id.obf_order>
 		<tsl_lang>FRA</tsl_lang>
@@ -3876,7 +3888,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGExclusion</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgExclusion</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgCustomerEmail</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>110</tsl_id.obf_order>
 		<tsl_lang>FRA</tsl_lang>
@@ -3889,7 +3901,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGExclusion</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgExclusion</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgIngredientName</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>210</tsl_id.obf_order>
 		<tsl_lang>FRA</tsl_lang>
@@ -3902,7 +3914,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGOrder</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgOrder</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgCustomerEmail</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>110</tsl_id.obf_order>
 		<tsl_lang>FRA</tsl_lang>
@@ -3915,7 +3927,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGOrder</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgOrder</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgCustomerFirstname</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>120</tsl_id.obf_order>
 		<tsl_lang>FRA</tsl_lang>
@@ -3928,7 +3940,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGOrder</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_object_id.obo_name>BrgOrder</tsl_id.obf_object_id.obo_name>
 		<tsl_id.obf_field_id.fld_name>brgCustomerLastname</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>140</tsl_id.obf_order>
 		<tsl_lang>FRA</tsl_lang>
@@ -3941,11 +3953,11 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGOrder</tsl_id.obf_object_id.obo_name>
-		<tsl_id.obf_field_id.fld_name>brgBugerPrice</tsl_id.obf_field_id.fld_name>
+		<tsl_id.obf_object_id.obo_name>BrgOrder</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_field_id.fld_name>brgBurgerName</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>210</tsl_id.obf_order>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Prix du burger</tsl_value>
+		<tsl_value>Nom du burger</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_listhelp/>
@@ -3954,11 +3966,11 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 	<data>
 		<tsl_typeObjectField>L</tsl_typeObjectField>
-		<tsl_id.obf_object_id.obo_name>BRGOrder</tsl_id.obf_object_id.obo_name>
-		<tsl_id.obf_field_id.fld_name>brgBurgerName</tsl_id.obf_field_id.fld_name>
+		<tsl_id.obf_object_id.obo_name>BrgOrder</tsl_id.obf_object_id.obo_name>
+		<tsl_id.obf_field_id.fld_name>brgBurgerPrice</tsl_id.obf_field_id.fld_name>
 		<tsl_id.obf_order>210</tsl_id.obf_order>
 		<tsl_lang>FRA</tsl_lang>
-		<tsl_value>Nom du burger</tsl_value>
+		<tsl_value>Prix du burger</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_listhelp/>

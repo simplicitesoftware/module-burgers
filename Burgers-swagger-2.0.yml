@@ -4,6 +4,66 @@
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
 #             |_| Module: Burgers 1.0
 paths:
+  /rest/BrgExclusion:
+    get:
+      summary: Search BrgExclusion business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgexclusion-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfBrgExclusion'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: brgExclusionCustomerId
+        description: Search filter for Customer
+        type: string
+        required: false
+      - in: query
+        name: brgExclusionCustomerId__brgCustomerEmail
+        description: Search filter for Email
+        type: string
+        required: false
+      - in: query
+        name: brgExclusionIngredientId
+        description: Search filter for Ingredient
+        type: string
+        required: false
+      - in: query
+        name: brgExclusionIngredientId__brgIngredientName
+        description: Search filter for Name
+        type: string
+        required: false
+      tags:
+      - BrgExclusion
   /login:
     get:
       summary: Login (obtain bearer token)
@@ -32,1045 +92,9 @@ paths:
         - token
       tags:
       - session
-  /logout:
+  /rest/BrgComposition:
     get:
-      summary: Logout (revoke bearer token)
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: logout
-      responses:
-        '200':
-          description: Successfull logout
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-      tags:
-      - session
-  /rest/BRGBurger:
-    get:
-      summary: Search BRGBurger business object records or get contextualized metadata
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgburger-search
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ArrayOfBRGBurger'
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: query
-        name: _metadata
-        description: Metadata?
-        type: boolean
-        required: false
-      - in: query
-        name: _count
-        description: Count?
-        type: boolean
-        required: false
-      - in: query
-        name: _doc
-        description: Documentation?
-        type: boolean
-        required: false
-      - in: query
-        name: _indexsearch
-        description: Index search query
-        type: string
-        required: false
-      - in: query
-        name: brgBurgerName
-        description: Search filter for Name
-        type: string
-        required: false
-      - in: query
-        name: brgBugerPrice
-        description: Search filter for Price
-        type: number
-        required: false
-      - in: query
-        name: brgBurgerPicture
-        description: Search filter for Picture
-        type: string
-        required: false
-      - in: query
-        name: brgBurgerDescription
-        description: Search filter for Description
-        type: string
-        required: false
-      tags:
-      - BRGBurger
-  /:
-    get:
-      summary: Get user session information
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: info
-      responses:
-        '200':
-          description: Success in getting user session information
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-      parameters:
-      - in: query
-        name: texts
-        description: Texts?
-        type: boolean
-        required: false
-      tags:
-      - session
-  /rest/BRGCustomer:
-    get:
-      summary: Search BRGCustomer business object records or get contextualized metadata
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgcustomer-search
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ArrayOfBRGCustomer'
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: query
-        name: _metadata
-        description: Metadata?
-        type: boolean
-        required: false
-      - in: query
-        name: _count
-        description: Count?
-        type: boolean
-        required: false
-      - in: query
-        name: _doc
-        description: Documentation?
-        type: boolean
-        required: false
-      - in: query
-        name: _indexsearch
-        description: Index search query
-        type: string
-        required: false
-      - in: query
-        name: brgCustomerEmail
-        description: Search filter for Email
-        type: string
-        required: false
-      - in: query
-        name: brgCustomerPhone
-        description: Search filter for Phone number
-        type: string
-        required: false
-      - in: query
-        name: brgCustomerLastname
-        description: Search filter for Last name
-        type: string
-        required: false
-      - in: query
-        name: brgCustomerFirstname
-        description: Search filter for First name
-        type: string
-        required: false
-      tags:
-      - BRGCustomer
-  /rest/BRGCustomer/{row_id}:
-    post:
-      summary: Create a new BRGCustomerbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgcustomer-create
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGCustomer'
-          description: Success in creating a new business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/BRGCustomer'
-        in: body
-        name: body
-      tags:
-      - BRGCustomer
-      consumes:
-      - application/json
-    get:
-      summary: Get a BRGCustomer business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgcustomer-get
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGCustomer'
-          description: Success in getting a single business object record
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - in: query
-        name: _inline_documents
-        description: Inline documents?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_objects
-        description: Inline objects?
-        type: boolean
-        required: false
-      tags:
-      - BRGCustomer
-    delete:
-      summary: Delete a BRGCustomer business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgcustomer-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - BRGCustomer
-    put:
-      summary: Update a BRGCustomerbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgcustomer-update
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGCustomer'
-          description: Success in updating a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/BRGCustomer'
-        in: body
-        name: body
-      tags:
-      - BRGCustomer
-      consumes:
-      - application/json
-  /rest/BRGIngredient:
-    get:
-      summary: Search BRGIngredient business object records or get contextualized
-        metadata
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgingredient-search
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ArrayOfBRGIngredient'
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: query
-        name: _metadata
-        description: Metadata?
-        type: boolean
-        required: false
-      - in: query
-        name: _count
-        description: Count?
-        type: boolean
-        required: false
-      - in: query
-        name: _doc
-        description: Documentation?
-        type: boolean
-        required: false
-      - in: query
-        name: _indexsearch
-        description: Index search query
-        type: string
-        required: false
-      - in: query
-        name: brgIngredientName
-        description: Search filter for Name
-        type: string
-        required: false
-      - in: query
-        name: brgIngredientPrice
-        description: Search filter for Price
-        type: number
-        required: false
-      tags:
-      - BRGIngredient
-  /rest/BRGExclusion/{row_id}:
-    post:
-      summary: Create a new BRGExclusionbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgexclusion-create
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGExclusion'
-          description: Success in creating a new business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/BRGExclusion'
-        in: body
-        name: body
-      tags:
-      - BRGExclusion
-      consumes:
-      - application/json
-    get:
-      summary: Get a BRGExclusion business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgexclusion-get
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGExclusion'
-          description: Success in getting a single business object record
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - in: query
-        name: _inline_documents
-        description: Inline documents?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_objects
-        description: Inline objects?
-        type: boolean
-        required: false
-      tags:
-      - BRGExclusion
-    delete:
-      summary: Delete a BRGExclusion business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgexclusion-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - BRGExclusion
-    put:
-      summary: Update a BRGExclusionbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgexclusion-update
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGExclusion'
-          description: Success in updating a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/BRGExclusion'
-        in: body
-        name: body
-      tags:
-      - BRGExclusion
-      consumes:
-      - application/json
-  /rest/BRGIngredient/{row_id}:
-    post:
-      summary: Create a new BRGIngredientbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgingredient-create
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGIngredient'
-          description: Success in creating a new business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/BRGIngredient'
-        in: body
-        name: body
-      tags:
-      - BRGIngredient
-      consumes:
-      - application/json
-    get:
-      summary: Get a BRGIngredient business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgingredient-get
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGIngredient'
-          description: Success in getting a single business object record
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - in: query
-        name: _inline_documents
-        description: Inline documents?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_objects
-        description: Inline objects?
-        type: boolean
-        required: false
-      tags:
-      - BRGIngredient
-    delete:
-      summary: Delete a BRGIngredient business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgingredient-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - BRGIngredient
-    put:
-      summary: Update a BRGIngredientbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgingredient-update
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGIngredient'
-          description: Success in updating a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/BRGIngredient'
-        in: body
-        name: body
-      tags:
-      - BRGIngredient
-      consumes:
-      - application/json
-  /rest/BRGComposition/{row_id}:
-    post:
-      summary: Create a new BRGCompositionbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgcomposition-create
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGComposition'
-          description: Success in creating a new business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/BRGComposition'
-        in: body
-        name: body
-      tags:
-      - BRGComposition
-      consumes:
-      - application/json
-    get:
-      summary: Get a BRGComposition business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgcomposition-get
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGComposition'
-          description: Success in getting a single business object record
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - in: query
-        name: _inline_documents
-        description: Inline documents?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_objects
-        description: Inline objects?
-        type: boolean
-        required: false
-      tags:
-      - BRGComposition
-    delete:
-      summary: Delete a BRGComposition business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgcomposition-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - BRGComposition
-    put:
-      summary: Update a BRGCompositionbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgcomposition-update
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGComposition'
-          description: Success in updating a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/BRGComposition'
-        in: body
-        name: body
-      tags:
-      - BRGComposition
-      consumes:
-      - application/json
-  /rest/BRGOrder/{row_id}:
-    post:
-      summary: Create a new BRGOrderbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgorder-create
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGOrder'
-          description: Success in creating a new business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/BRGOrder'
-        in: body
-        name: body
-      tags:
-      - BRGOrder
-      consumes:
-      - application/json
-    get:
-      summary: Get a BRGOrder business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgorder-get
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGOrder'
-          description: Success in getting a single business object record
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - in: query
-        name: _inline_documents
-        description: Inline documents?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_objects
-        description: Inline objects?
-        type: boolean
-        required: false
-      tags:
-      - BRGOrder
-    delete:
-      summary: Delete a BRGOrder business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgorder-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - BRGOrder
-    put:
-      summary: Update a BRGOrderbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgorder-update
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGOrder'
-          description: Success in updating a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/BRGOrder'
-        in: body
-        name: body
-      tags:
-      - BRGOrder
-      consumes:
-      - application/json
-  /rest/BRGComposition:
-    get:
-      summary: Search BRGComposition business object records or get contextualized
+      summary: Search BrgComposition business object records or get contextualized
         metadata
       security:
       - bearerAuth: []
@@ -1080,7 +104,7 @@ paths:
       responses:
         '200':
           schema:
-            $ref: '#/definitions/ArrayOfBRGComposition'
+            $ref: '#/definitions/ArrayOfBrgComposition'
           description: Success in searching business object records (or in getting
             contextualized business object metadata, documentation, ...)
         '401':
@@ -1133,232 +157,10 @@ paths:
         type: integer
         required: false
       tags:
-      - BRGComposition
-  /rest/BRGBurger/{row_id}:
-    post:
-      summary: Create a new BRGBurgerbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgburger-create
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGBurger'
-          description: Success in creating a new business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/BRGBurger'
-        in: body
-        name: body
-      tags:
-      - BRGBurger
-      consumes:
-      - application/json
+      - BrgComposition
+  /rest/BrgOrder:
     get:
-      summary: Get a BRGBurger business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgburger-get
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGBurger'
-          description: Success in getting a single business object record
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - in: query
-        name: _inline_documents
-        description: Inline documents?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_objects
-        description: Inline objects?
-        type: boolean
-        required: false
-      tags:
-      - BRGBurger
-    delete:
-      summary: Delete a BRGBurger business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgburger-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - BRGBurger
-    put:
-      summary: Update a BRGBurgerbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgburger-update
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/BRGBurger'
-          description: Success in updating a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: row_id
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/BRGBurger'
-        in: body
-        name: body
-      tags:
-      - BRGBurger
-      consumes:
-      - application/json
-  /rest/BRGExclusion:
-    get:
-      summary: Search BRGExclusion business object records or get contextualized metadata
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-brgexclusion-search
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ArrayOfBRGExclusion'
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: query
-        name: _metadata
-        description: Metadata?
-        type: boolean
-        required: false
-      - in: query
-        name: _count
-        description: Count?
-        type: boolean
-        required: false
-      - in: query
-        name: _doc
-        description: Documentation?
-        type: boolean
-        required: false
-      - in: query
-        name: brgExclusionCustomerId
-        description: Search filter for Customer
-        type: string
-        required: false
-      - in: query
-        name: brgExclusionCustomerId__brgCustomerEmail
-        description: Search filter for Email
-        type: string
-        required: false
-      - in: query
-        name: brgExclusionIngredientId
-        description: Search filter for Ingredient
-        type: string
-        required: false
-      - in: query
-        name: brgExclusionIngredientId__brgIngredientName
-        description: Search filter for Name
-        type: string
-        required: false
-      tags:
-      - BRGExclusion
-  /rest/BRGOrder:
-    get:
-      summary: Search BRGOrder business object records or get contextualized metadata
+      summary: Search BrgOrder business object records or get contextualized metadata
       security:
       - bearerAuth: []
       produces:
@@ -1367,7 +169,7 @@ paths:
       responses:
         '200':
           schema:
-            $ref: '#/definitions/ArrayOfBRGOrder'
+            $ref: '#/definitions/ArrayOfBrgOrder'
           description: Success in searching business object records (or in getting
             contextualized business object metadata, documentation, ...)
         '401':
@@ -1447,7 +249,7 @@ paths:
         type: string
         required: false
       - in: query
-        name: brgOrderBurgerId__brgBugerPrice
+        name: brgOrderBurgerId__brgBurgerPrice
         description: Search filter for Price
         type: number
         required: false
@@ -1462,7 +264,1205 @@ paths:
         type: string
         required: false
       tags:
-      - BRGOrder
+      - BrgOrder
+  /logout:
+    get:
+      summary: Logout (revoke bearer token)
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: logout
+      responses:
+        '200':
+          description: Successfull logout
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+      tags:
+      - session
+  /rest/BrgIngredient:
+    get:
+      summary: Search BrgIngredient business object records or get contextualized
+        metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgingredient-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfBrgIngredient'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: _indexsearch
+        description: Index search query
+        type: string
+        required: false
+      - in: query
+        name: brgIngredientName
+        description: Search filter for Name
+        type: string
+        required: false
+      - in: query
+        name: brgIngredientPrice
+        description: Search filter for Price
+        type: number
+        required: false
+      tags:
+      - BrgIngredient
+  /rest/BrgComposition/{row_id}:
+    post:
+      summary: Create a new BrgCompositionbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgcomposition-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgComposition'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/BrgComposition'
+        in: body
+        name: body
+      tags:
+      - BrgComposition
+      consumes:
+      - application/json
+    get:
+      summary: Get a BrgComposition business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgcomposition-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgComposition'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - BrgComposition
+    delete:
+      summary: Delete a BrgComposition business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgcomposition-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - BrgComposition
+    put:
+      summary: Update a BrgCompositionbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgcomposition-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgComposition'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/BrgComposition'
+        in: body
+        name: body
+      tags:
+      - BrgComposition
+      consumes:
+      - application/json
+  /rest/BrgCustomer/{row_id}:
+    post:
+      summary: Create a new BrgCustomerbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgcustomer-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgCustomer'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/BrgCustomer'
+        in: body
+        name: body
+      tags:
+      - BrgCustomer
+      consumes:
+      - application/json
+    get:
+      summary: Get a BrgCustomer business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgcustomer-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgCustomer'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - BrgCustomer
+    delete:
+      summary: Delete a BrgCustomer business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgcustomer-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - BrgCustomer
+    put:
+      summary: Update a BrgCustomerbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgcustomer-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgCustomer'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/BrgCustomer'
+        in: body
+        name: body
+      tags:
+      - BrgCustomer
+      consumes:
+      - application/json
+  /rest/BrgExclusion/{row_id}:
+    post:
+      summary: Create a new BrgExclusionbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgexclusion-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgExclusion'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/BrgExclusion'
+        in: body
+        name: body
+      tags:
+      - BrgExclusion
+      consumes:
+      - application/json
+    get:
+      summary: Get a BrgExclusion business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgexclusion-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgExclusion'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - BrgExclusion
+    delete:
+      summary: Delete a BrgExclusion business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgexclusion-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - BrgExclusion
+    put:
+      summary: Update a BrgExclusionbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgexclusion-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgExclusion'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/BrgExclusion'
+        in: body
+        name: body
+      tags:
+      - BrgExclusion
+      consumes:
+      - application/json
+  /rest/BrgIngredient/{row_id}:
+    post:
+      summary: Create a new BrgIngredientbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgingredient-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgIngredient'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/BrgIngredient'
+        in: body
+        name: body
+      tags:
+      - BrgIngredient
+      consumes:
+      - application/json
+    get:
+      summary: Get a BrgIngredient business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgingredient-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgIngredient'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - BrgIngredient
+    delete:
+      summary: Delete a BrgIngredient business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgingredient-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - BrgIngredient
+    put:
+      summary: Update a BrgIngredientbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgingredient-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgIngredient'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/BrgIngredient'
+        in: body
+        name: body
+      tags:
+      - BrgIngredient
+      consumes:
+      - application/json
+  /rest/BrgCustomer:
+    get:
+      summary: Search BrgCustomer business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgcustomer-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfBrgCustomer'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: _indexsearch
+        description: Index search query
+        type: string
+        required: false
+      - in: query
+        name: brgCustomerEmail
+        description: Search filter for Email
+        type: string
+        required: false
+      - in: query
+        name: brgCustomerPhone
+        description: Search filter for Phone number
+        type: string
+        required: false
+      - in: query
+        name: brgCustomerLastname
+        description: Search filter for Last name
+        type: string
+        required: false
+      - in: query
+        name: brgCustomerFirstname
+        description: Search filter for First name
+        type: string
+        required: false
+      tags:
+      - BrgCustomer
+  /:
+    get:
+      summary: Get user session information
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: info
+      responses:
+        '200':
+          description: Success in getting user session information
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+      parameters:
+      - in: query
+        name: texts
+        description: Texts?
+        type: boolean
+        required: false
+      tags:
+      - session
+  /rest/BrgOrder/{row_id}:
+    post:
+      summary: Create a new BrgOrderbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgorder-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgOrder'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/BrgOrder'
+        in: body
+        name: body
+      tags:
+      - BrgOrder
+      consumes:
+      - application/json
+    get:
+      summary: Get a BrgOrder business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgorder-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgOrder'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - BrgOrder
+    delete:
+      summary: Delete a BrgOrder business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgorder-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - BrgOrder
+    put:
+      summary: Update a BrgOrderbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgorder-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgOrder'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/BrgOrder'
+        in: body
+        name: body
+      tags:
+      - BrgOrder
+      consumes:
+      - application/json
+  /rest/BrgBurger/{row_id}:
+    post:
+      summary: Create a new BrgBurgerbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgburger-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgBurger'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/BrgBurger'
+        in: body
+        name: body
+      tags:
+      - BrgBurger
+      consumes:
+      - application/json
+    get:
+      summary: Get a BrgBurger business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgburger-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgBurger'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - BrgBurger
+    delete:
+      summary: Delete a BrgBurger business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgburger-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - BrgBurger
+    put:
+      summary: Update a BrgBurgerbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgburger-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/BrgBurger'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: row_id
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/BrgBurger'
+        in: body
+        name: body
+      tags:
+      - BrgBurger
+      consumes:
+      - application/json
+  /rest/BrgBurger:
+    get:
+      summary: Search BrgBurger business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-brgburger-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfBrgBurger'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: _indexsearch
+        description: Index search query
+        type: string
+        required: false
+      - in: query
+        name: brgBurgerName
+        description: Search filter for Name
+        type: string
+        required: false
+      - in: query
+        name: brgBurgerPrice
+        description: Search filter for Price
+        type: number
+        required: false
+      - in: query
+        name: brgBurgerPicture
+        description: Search filter for Picture
+        type: string
+        required: false
+      - in: query
+        name: brgBurgerDescription
+        description: Search filter for Description
+        type: string
+        required: false
+      tags:
+      - BrgBurger
 securityDefinitions:
   basicAuth:
     type: basic
@@ -1482,58 +1482,7 @@ definitions:
         type: integer
         enum:
         - 404
-  BRGComposition:
-    type: object
-    properties:
-      brgCompositionBurgerId:
-        description: Burger
-        type: string
-      brgCompositionIngredientId__brgIngredientName:
-        description: Name
-        type: string
-      brgCompositionQuantity:
-        description: Quantity
-        type: integer
-      brgCompositionBurgerId__brgBurgerName:
-        description: Name
-        type: string
-      brgCompositionIngredientId:
-        description: Ingredient
-        type: string
-      row_id:
-        description: Unique technical row ID
-        type: string
-  ArrayOfBRGCustomer:
-    type: array
-    items:
-      $ref: '#/definitions/BRGCustomer'
-  ArrayOfBRGExclusion:
-    type: array
-    items:
-      $ref: '#/definitions/BRGExclusion'
-  ArrayOfBRGBurger:
-    type: array
-    items:
-      $ref: '#/definitions/BRGBurger'
-  BRGCustomer:
-    type: object
-    properties:
-      brgCustomerPhone:
-        description: Phone number
-        type: string
-      brgCustomerFirstname:
-        description: First name
-        type: string
-      brgCustomerLastname:
-        description: Last name
-        type: string
-      brgCustomerEmail:
-        description: Email
-        type: string
-      row_id:
-        description: Unique technical row ID
-        type: string
-  BRGIngredient:
+  BrgIngredient:
     type: object
     properties:
       brgIngredientName:
@@ -1545,28 +1494,18 @@ definitions:
       brgIngredientPrice:
         description: Price
         type: number
-  BRGBurger:
-    type: object
-    properties:
-      brgBurgerPicture:
-        description: Picture
-        type: object
-      brgBurgerDescription:
-        description: Description
-        type: string
-      row_id:
-        description: Unique technical row ID
-        type: string
-      brgBurgerName:
-        description: Name
-        type: string
-      brgBugerPrice:
-        description: Price
-        type: number
-  ArrayOfBRGIngredient:
+  ArrayOfBrgCustomer:
     type: array
     items:
-      $ref: '#/definitions/BRGIngredient'
+      $ref: '#/definitions/BrgCustomer'
+  ArrayOfBrgIngredient:
+    type: array
+    items:
+      $ref: '#/definitions/BrgIngredient'
+  ArrayOfBrgOrder:
+    type: array
+    items:
+      $ref: '#/definitions/BrgOrder'
   PublicationResult:
     type: object
     properties:
@@ -1576,37 +1515,16 @@ definitions:
       content:
         description: Content (plain text or base64 encoded)
         type: string
-  ArrayOfBRGOrder:
+  ArrayOfBrgExclusion:
     type: array
     items:
-      $ref: '#/definitions/BRGOrder'
-  BRGExclusion:
+      $ref: '#/definitions/BrgExclusion'
+  BrgOrder:
     type: object
     properties:
-      brgExclusionIngredientId:
-        description: Ingredient
-        type: string
-      brgExclusionCustomerId:
-        description: Customer
-        type: string
-      brgExclusionCustomerId__brgCustomerEmail:
-        description: Email
-        type: string
-      row_id:
-        description: Unique technical row ID
-        type: string
-      brgExclusionIngredientId__brgIngredientName:
-        description: Name
-        type: string
-  ActionResult:
-    type: object
-    properties:
-      result:
-        description: Action result
-        type: string
-  BRGOrder:
-    type: object
-    properties:
+      brgOrderBurgerId__brgBurgerPrice:
+        description: Price
+        type: number
       brgOrderBurgerId:
         description: Burger
         type: string
@@ -1616,9 +1534,6 @@ definitions:
       brgOrderCustomerId__brgCustomerEmail:
         description: Email
         type: string
-      brgOrderBurgerId__brgBugerPrice:
-        description: Price
-        type: number
       brgOrderCustomerId:
         description: Customer
         type: string
@@ -1640,16 +1555,65 @@ definitions:
       brgOrderDate:
         description: Date
         type: string
+  ArrayOfBrgComposition:
+    type: array
+    items:
+      $ref: '#/definitions/BrgComposition'
+  ActionResult:
+    type: object
+    properties:
+      result:
+        description: Action result
+        type: string
   TreeviewData:
     type: object
     properties:
       item:
         description: Object item with lists of linked objects' items
         type: object
-  ArrayOfBRGComposition:
+  BrgComposition:
+    type: object
+    properties:
+      brgCompositionBurgerId:
+        description: Burger
+        type: string
+      brgCompositionIngredientId__brgIngredientName:
+        description: Name
+        type: string
+      brgCompositionQuantity:
+        description: Quantity
+        type: integer
+      brgCompositionBurgerId__brgBurgerName:
+        description: Name
+        type: string
+      brgCompositionIngredientId:
+        description: Ingredient
+        type: string
+      row_id:
+        description: Unique technical row ID
+        type: string
+  BrgCustomer:
+    type: object
+    properties:
+      brgCustomerPhone:
+        description: Phone number
+        type: string
+      brgCustomerFirstname:
+        description: First name
+        type: string
+      brgCustomerLastname:
+        description: Last name
+        type: string
+      brgCustomerEmail:
+        description: Email
+        type: string
+      row_id:
+        description: Unique technical row ID
+        type: string
+  ArrayOfBrgBurger:
     type: array
     items:
-      $ref: '#/definitions/BRGComposition'
+      $ref: '#/definitions/BrgBurger'
   Error400:
     type: object
     properties:
@@ -1683,6 +1647,42 @@ definitions:
         type: integer
         enum:
         - 500
+  BrgExclusion:
+    type: object
+    properties:
+      brgExclusionIngredientId:
+        description: Ingredient
+        type: string
+      brgExclusionCustomerId:
+        description: Customer
+        type: string
+      brgExclusionCustomerId__brgCustomerEmail:
+        description: Email
+        type: string
+      row_id:
+        description: Unique technical row ID
+        type: string
+      brgExclusionIngredientId__brgIngredientName:
+        description: Name
+        type: string
+  BrgBurger:
+    type: object
+    properties:
+      brgBurgerPrice:
+        description: Price
+        type: number
+      brgBurgerPicture:
+        description: Picture
+        type: object
+      brgBurgerDescription:
+        description: Description
+        type: string
+      row_id:
+        description: Unique technical row ID
+        type: string
+      brgBurgerName:
+        description: Name
+        type: string
   Error403:
     type: object
     properties:
@@ -1707,15 +1707,15 @@ info:
   title: Burgers
   version: '1.0'
 tags:
-- name: BRGBurger
+- name: BrgBurger
   description: Burger
-- name: BRGComposition
+- name: BrgComposition
   description: Burger's ingredient
-- name: BRGCustomer
+- name: BrgCustomer
   description: Customer
-- name: BRGExclusion
+- name: BrgExclusion
   description: Exclusion
-- name: BRGIngredient
+- name: BrgIngredient
   description: Ingredient
-- name: BRGOrder
+- name: BrgOrder
   description: Order
