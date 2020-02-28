@@ -3196,7 +3196,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>brgCustomerEmail</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Email of the customer</tsl_value>
+		<tsl_value>Customer email</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
@@ -3208,7 +3208,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>brgCustomerFirstname</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>First name of the client</tsl_value>
+		<tsl_value>Customer first name</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
@@ -3220,7 +3220,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>brgCustomerLastname</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Last name of the client</tsl_value>
+		<tsl_value>Customer last name</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
@@ -3232,7 +3232,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>brgCustomerPhone</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
-		<tsl_value>Phone number of the customer</tsl_value>
+		<tsl_value>Customer phone number</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>
@@ -4092,7 +4092,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 		<dt_name>Burgers-data</dt_name>
 		<dt_file>data/Burgers-data.zip</dt_file>
-		<dt_desc><![CDATA[Burgers data]]></dt_desc>
+		<dt_desc><![CDATA[Test data]]></dt_desc>
 	</data>
 </object>
 </simplicite>
