@@ -207,7 +207,7 @@ paths:
         type: string
         required: false
         enum:
-        - BRGOrderStats
+        - BrgOrderStats
       - in: query
         name: _crosstabcubes
         description: Pivot table data as cubes?

@@ -472,7 +472,7 @@ paths:
       - schema:
           type: string
           enum:
-          - BRGOrderStats
+          - BrgOrderStats
         in: query
         name: _crosstab
         description: Apply pivot table

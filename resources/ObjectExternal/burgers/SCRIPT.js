@@ -60,13 +60,13 @@ if (typeof burgers === 'undefined') burgers = (function($) {
 	}
 	
 	function orderDialog() {
-		var burger = brg.getItem($(this).data('id'));
+		var burger = brg.getItem($(this).data('id').toString()); // ZZZ getItem argument must be a string
 		bootbox.dialog({
 			title: "Commander un &quot;" + burger.brgBurgerName + "&quot;",
 			message: Mustache.render($('#order-template').html(), burger),
 			buttons: {
 				confirm: { label: 'Commander', className: 'btn-success', callback: function() {
-					var ord = app.getBusinessObject('BRGOrder');
+					var ord = app.getBusinessObject('BrgOrder');
 					ord.item.brgOrderBurgerId = burger.row_id;
 					ord.item.brgOrderCustomerId = cus.item.row_id;
 					ord.create(function() {
