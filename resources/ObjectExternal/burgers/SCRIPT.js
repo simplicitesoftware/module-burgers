@@ -1,4 +1,4 @@
-if (typeof burgers === 'undefined') burgers = (function($) {
+var burgers = typeof burgers !== 'undefined' ? burgers : (function($) {
 	var app, cus, exc, brg, ing, i, j;
 
 	function updateExclusions(cbk) {

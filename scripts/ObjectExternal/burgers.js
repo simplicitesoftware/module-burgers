@@ -1,5 +1,4 @@
 burgers.display = function(params) {
-	var g = this.getGrant();
 	this.setDecoration(false);
 	var wp = new JQueryWebPage(params.getRoot(), this.getDisplay());
 	wp.setFavicon(HTMLTool.getResourceIconURL(this, "FAVICON"))

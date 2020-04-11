@@ -65,6 +65,7 @@ components:
         brgOrderDatetime:
           description: Date and time
           type: string
+          example: yyyy-MM-dd HH:mm:ss
         brgOrderCustomerId__brgCustomerEmail:
           description: Email
           type: string
@@ -89,6 +90,7 @@ components:
         brgOrderDate:
           description: Date
           type: string
+          example: yyyy-MM-dd
     ArrayOfBrgComposition:
       type: array
       items:
