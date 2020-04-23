@@ -116,6 +116,18 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	</data>
 </object>
 <object>
+	<name>Model</name>
+	<action>upsert</action>
+	<data>
+		<mod_name>Burgers</mod_name>
+		<mod_template_id.mtp_name>ModelBusinessObject</mod_template_id.mtp_name>
+		<mod_doc>files/Model/Burgers.svg</mod_doc>
+		<mod_json/>
+		<mod_image>files/Model/Burgers.png</mod_image>
+		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+	</data>
+</object>
+<object>
 	<name>User</name>
 	<action>upsert</action>
 	<data>
