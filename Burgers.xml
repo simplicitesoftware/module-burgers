@@ -97,8 +97,9 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<thm_menu_sact_t/>
 		<thm_menu_sta_c/>
 		<thm_menu_sta_t/>
-		<thm_compact/>
+		<thm_compact>0</thm_compact>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
+		<thm_const/>
 	</data>
 </object>
 <object>
@@ -306,7 +307,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -343,7 +344,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -380,7 +381,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>20</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -417,7 +418,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>2</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -454,7 +455,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -491,7 +492,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -528,7 +529,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -565,7 +566,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>12</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -602,7 +603,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -639,7 +640,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -676,7 +677,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>22</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -713,7 +714,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -750,7 +751,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -787,7 +788,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -824,7 +825,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>2</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -861,7 +862,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -898,7 +899,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>13</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -935,7 +936,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -972,7 +973,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>4</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -1009,7 +1010,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>5</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -1311,6 +1312,8 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 	<data>
 		<obo_name>BrgComposition</obo_name>
@@ -1375,6 +1378,8 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 	<data>
 		<obo_name>BrgCustomer</obo_name>
@@ -1439,6 +1444,8 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 	<data>
 		<obo_name>BrgExclusion</obo_name>
@@ -1503,6 +1510,8 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 	<data>
 		<obo_name>BrgIngredient</obo_name>
@@ -1567,6 +1576,8 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 	<data>
 		<obo_name>BrgOrder</obo_name>
@@ -1631,6 +1642,8 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 </object>
 <object>
@@ -2914,7 +2927,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 	<data>
 		<ctg_crosstab_id.ctb_name>BrgOrderStats</ctg_crosstab_id.ctb_name>
 		<ctg_group_id.grp_name>BRG_ADMIN</ctg_group_id.grp_name>
-		<ctg_edit/>
+		<ctg_edit>0</ctg_edit>
 		<row_module_id.mdl_name>Burgers</row_module_id.mdl_name>
 	</data>
 </object>
@@ -2970,6 +2983,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<vwi_show/>
 		<vwi_url/>
 		<vwi_image/>
+		<vwi_treeview_id.trv_name/>
 		<vwi_crosstab_id.ctb_name/>
 		<vwi_printtmpl_id.prt_name/>
 		<vwi_printtmpl_id.prt_lang/>
@@ -2988,6 +3002,7 @@ Open this dataset and click on the _Apply_ button after having imported the modu
 		<vwi_show/>
 		<vwi_url/>
 		<vwi_image/>
+		<vwi_treeview_id.trv_name/>
 		<vwi_crosstab_id.ctb_name/>
 		<vwi_printtmpl_id.prt_name/>
 		<vwi_printtmpl_id.prt_lang/>

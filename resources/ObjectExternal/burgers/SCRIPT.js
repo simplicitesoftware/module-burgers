@@ -1,4 +1,4 @@
-var burgers = burgers || (function($) {
+var burgers = (function($) {
 	var app, cus, exc, brg, ing, i, j;
 
 	function updateExclusions(cbk) {
